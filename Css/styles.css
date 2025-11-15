@@ -1,0 +1,20 @@
+:root {
+      --primary-orange: #cc6918;
+      --primary-teal: #14b8a6;
+      --primary-green: #10b981;
+      --primary-pink: #ec4899;
+      --text-dark: #222;
+      --text-light: #6b7280;
+      --bg-light: #f9fafb;
+      --white: #ffffff;
+      --light-orange: #fef3e2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+     .text-orange {
+            color: var(--primary-orange) !important;
+        }

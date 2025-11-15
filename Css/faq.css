@@ -1,0 +1,26 @@
+#faq .accordion-button {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background-color: #0d6efd; /* Bootstrap primary or your theme color */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13,110,253,0.2);
+}
+
+#faq .accordion-item {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#faq .accordion-body {
+  background: #f9fafb;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#faq .accordion-button:focus {
+  box-shadow: none;
+}
