@@ -178,13 +178,26 @@
         <div class="col-lg-6">
           <div class="contact-card p-4 bg-white shadow rounded">
             <h3>Contact Us</h3>
-            <form id="heroForm">
+           <form id="contactForm" method=' POST'>
               <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
-              <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" name="name" required></div>
-              <div class="mb-3"><input type="email" class="form-control" placeholder="Email Address" name="email" required></div>
-              <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number" name="phone" required></div>
-              <div class="mb-3"><textarea class="form-control" rows="3" placeholder="Reason for eviction" name="reason" required></textarea></div>
-              <button type="submit" class="btn w-100" style="background-color:#cc6918;color:white;"><i class="fas fa-paper-plane me-2"></i>Submit</button>
+              <div class="mb-2">
+                <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+                <input type="hidden" name="subject" value="New Contact Form Submission">
+                <input type="checkbox" name="botcheck" style="display: none;">
+                <input type="text" class="form-control" placeholder="Your Name" required id="name" name="name" />
+              </div>
+              <div class="mb-2">
+                <input type="email" class="form-control" placeholder="Email Address" required id="email" name="email" />
+              </div>
+              <div class="mb-2">
+                <input type="tel" class="form-control" placeholder="Phone Number" required id="phone" name="phone" />
+              </div>
+              <div class="mb-2">
+                <textarea class="form-control" rows="3" placeholder="Reason for eviction" required id="reason"
+                  name="reason"></textarea>
+              </div>
+              <button type="submit" class="btn w-100" id="heroSubmitBtn"
+                style="background-color:#cc6918;color:white;"><i class="fas fa-paper-plane me-2"></i>Submit</button>
             </form>
           </div>
         </div>
@@ -600,92 +613,95 @@
             </div>
         </div>
     </section>
-<section class="popular-services py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">
-        <span class="highlight">Popular</span> Services
-      </h2>
-      <p class="text-muted">
-        Our expert team specialises in property and tenancy matters — offering fast, reliable, and compliant eviction and rent recovery services for landlords and agents across England and Wales.
-      </p>
+ <section class="popular-services py-5" id="popular-services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">
+          <span class="highlight">Popular</span> Services
+        </h2>
+        <p class="text-muted">
+          Our expert team specialises in property and tenancy matters — offering fast, reliable, and compliant eviction
+          and rent recovery services for landlords and agents across England and Wales.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img src="assets/about us.png" alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Estate Agents & Housing Association Eviction</h3>
+              <a href="section8-21.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img src="assets/hero.jpg" alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Complicated Eviction</h3>
+              <a href="ComplexCases.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img src="assets/law-firm-8306442_1280.jpg" alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Rent Recovery & Advice</h3>
+             <a href="arrears.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Priority Super Package (Contested Case Coverage)</h3>
+              <a href="PriorityEviction.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img src="assets/contract.png" alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Guaranteed Eviction (Uncontested)</h3>
+              <a href="contested.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card-new">
+            <img src="assets/about.jpg" alt="Service" class="card-image">
+            <div class="card-content">
+              <h3 class="card-title">Eviction Advice & Notice</h3>
+             <a href="guide.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="row g-4">
-       <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="assets/about us.png" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Estate Agents & Housing Association Eviction</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="assets/hero.jpg" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Complicated Eviction</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="assets/law-firm-8306442_1280.jpg" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Rent Recovery & Advice</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Priority Super Package (Contested Case Coverage)</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="assets/contract.png" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Guaranteed Eviction (Uncontested)</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card-new">
-          <img src="assets/about.jpg" 
-               alt="Service" 
-               class="card-image">
-          <div class="card-content">
-            <h3 class="card-title">Eviction Advice & Notice</h3>
-            <button class="read-more-btn">Read more</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 <section class="our-location py-5">
   <div class="container">
     <div class="text-center mb-5">
@@ -775,109 +791,120 @@
     </div>
   </div>
 </section>
-<section class="section section-alt mt-4 mb-md-2 py-md-4" id="contactForm">
-  <div class="container">
-    <h2 class="text-center">Start Your Eviction Today</h2>
-    <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">
-      Complete our 30-second form and we'll call you back within 24 hours
-    </p>
+ <section class="section section-alt mt-4 mb-md-2 py-md-4">
+    <div class="container">
+      <h2 class="text-center">Start Your Eviction Today</h2>
+      <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">
+        Complete our 30-second form and we'll call you back within 24 hours
+      </p>
 
-    <div class="row">
-      <div class="col-lg-6 mx-auto">
-        <form class="modern-contact-form">
-          <fieldset>
-            <div class="contact-us-home-fields">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
 
-              <!-- Title + Full Name -->
-               <label for="fullname">Full Name *</label>
-              <div class="input-row-full-name">
+          <!-- MAIN CONTACT FORM -->
+          <form id="mainContactForm" class="modern-contact-form">
+
+            <!-- Hidden required Web3Forms fields -->
+            <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
+            <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <fieldset>
+              <div class="contact-us-home-fields">
+
+                <!-- Title + Full Name -->
+                <label for="fullname">Full Name *</label>
+                <div class="input-row-full-name">
+                  <div class="select-wrapper">
+                    <select id="title" name="title" required>
+                      <option value="">Title</option>
+                      <option>Mr</option>
+                      <option>Mrs</option>
+                      <option>Ms</option>
+                      <option>Miss</option>
+                      <option>Dr</option>
+                      <option>Mx</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" id="fullname" name="fullname" required pattern="^[A-Za-z\s\-]{2,}$" />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required
+                    pattern="^((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})$" />
+                </div>
+
+                <!-- Eviction Help Needed -->
                 <div class="select-wrapper">
-                  <select id="title" name="title" required>
-                    <option value="">Title</option>
-                    <option>Mr</option>
-                    <option>Mrs</option>
-                    <option>Ms</option>
-                    <option>Miss</option>
-                    <option>Dr</option>
-                    <option>Mx</option>
+                  <select id="evictionType" name="evictionType" required>
+                    <option value="">Eviction Help Needed *</option>
+                    <option>Section 21 (No-Fault)</option>
+                    <option>Section 8 (Rent arrears)</option>
+                    <option>Inherited Tenant Situation</option>
+                    <option>Deposit Protection Issues</option>
+                    <option>Notice Already Served</option>
+                    <option>Rent Arrears Recovery</option>
+                    <option>Trespassers / Squatters</option>
+                    <option>HMO Property Issues</option>
+                    <option>Tenancy Agreement Review</option>
+                    <option>No Tenancy Agreement</option>
                   </select>
                 </div>
 
+                <!-- Description -->
                 <div class="form-group">
-                  
-                  <input type="text" id="fullname" name="fullname" required pattern="^[A-Za-z\s\-]{2,}$" />
+                  <label for="message">Brief Description of Situation</label>
+                  <textarea id="message" name="message" rows="3"
+                    placeholder="Tell us about your situation..."></textarea>
                 </div>
-              </div>
 
-              <!-- Email -->
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
+                <!-- Consent -->
+                <div class="form-check">
+                  <input type="checkbox" id="consentCheck" required>
+                  <label for="consentCheck">
+                    I consent to Eviction Help storing and processing my personal data
+                    for the purpose of responding to my enquiry.
+                    I have read and agree to the
+                    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
+                  </label>
+                </div>
 
-              <!-- Phone -->
-              <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  pattern="^((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})$"
-                />
-              </div>
+                <!-- Submit -->
+                <div class="text-center mt-3">
+                  <button type="submit" id="mainSubmitBtn" class="mainSubmitBtn cta-button-orange">
+                    <i class="fas fa-paper-plane"></i> Start My Eviction Now
+                  </button>
+                </div>
 
-              <!-- Eviction Help Needed -->
-              <div class="select-wrapper">
-                <select id="evictionType" name="evictionType" required>
-                  <option value="">Eviction Help Needed *</option>
-                  <option>Section 21 (No-Fault)</option>
-                  <option>Section 8 (Rent arrears)</option>
-                  <option>Inherited Tenant Situation</option>
-                  <option>Deposit Protection Issues</option>
-                  <option>Notice Already Served</option>
-                  <option>Rent Arrears Recovery</option>
-                  <option>Trespassers / Squatters</option>
-                  <option>HMO Property Issues</option>
-                  <option>Tenancy Agreement Review</option>
-                  <option>No Tenancy Agreement</option>
-                </select>
-              </div>
+                <!-- Success / Error Messages -->
+                <div class="form-success mt-3" id="mainFormSuccess">
+                  <strong>Success!</strong> Your message has been sent successfully.
+                </div>
 
-              <!-- Description -->
-              <div class="form-group">
-                <label for="message">Brief Description of Situation</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="3"
-                  placeholder="Tell us about your situation..."
-                ></textarea>
-              </div>
+                <div class="form-error mt-3" id="mainFormError">
+                  <strong>Error!</strong> There was a problem sending your message. Please try again.
+                </div>
 
-              <!-- Consent -->
-              <div class="form-check">
-                <input type="checkbox" id="consentCheck" required />
-                <label for="consentCheck">
-                  I consent to Eviction Help storing and processing my personal data for the purpose of responding to my enquiry.
-                  I have read and agree to the
-                  <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
-                </label>
               </div>
+            </fieldset>
+          </form>
 
-              <!-- Submit -->
-              <div class="text-center">
-                <button type="submit" class="cta-button-orange">
-                  <i class="fas fa-paper-plane"></i> Start My Eviction Now
-                </button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 <section class=" py-5 bg-light" id="faq">
   <div class="container">
     <div class="row justify-content-center">
@@ -1271,6 +1298,264 @@
       }
     });
   </script>
+ <script>
+    // ===== HERO CONTACT FORM =====
+    const heroForm = document.getElementById('contactForm');
 
+    if (heroForm && heroForm.closest('.hero')) {
+      const heroSubmitBtn = document.getElementById('heroSubmitBtn');
+      const heroSuccess = document.getElementById('heroFormSuccess');
+      const heroError = document.getElementById('heroFormError');
+
+      heroForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        heroSuccess.style.display = 'none';
+        heroError.style.display = 'none';
+
+        heroSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        heroSubmitBtn.disabled = true;
+
+        const formData = new FormData(heroForm);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => {
+            if (response.ok) {
+              heroForm.reset();
+              heroSuccess.style.display = 'block';
+              setTimeout(() => heroSuccess.style.display = 'none', 8000);
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(() => {
+            heroError.style.display = 'block';
+            setTimeout(() => heroError.style.display = 'none', 8000);
+          })
+          .finally(() => {
+            heroSubmitBtn.innerHTML = 'Submit';
+            heroSubmitBtn.disabled = false;
+          });
+      });
+    }
+
+    // ===== MAIN CONTACT FORM =====
+    const mainForm = document.getElementById('mainContactForm');
+
+    if (mainForm) {
+      const mainSubmitBtn = document.getElementById('mainSubmitBtn');
+      const mainSuccess = document.getElementById('mainFormSuccess');
+      const mainError = document.getElementById('mainFormError');
+      const dropdownText = document.getElementById('dropdownText');
+      const checklistInputs = document.querySelectorAll('input[name="checklist[]"]');
+
+      // Assign missing names
+      const nameInput = mainForm.querySelector('input[type="text"]');
+      const emailInput = mainForm.querySelector('input[type="email"]');
+      const phoneInput = mainForm.querySelector('input[type="tel"]');
+      const messageInput = mainForm.querySelector('textarea');
+
+      if (nameInput && !nameInput.name) nameInput.name = 'name';
+      if (emailInput && !emailInput.name) emailInput.name = 'email';
+      if (phoneInput && !phoneInput.name) phoneInput.name = 'phone';
+      if (messageInput && !messageInput.name) messageInput.name = 'message';
+
+      function updateDropdownText() {
+        const selected = Array.from(checklistInputs).filter(cb => cb.checked);
+        const labels = selected.map(cb => cb.parentElement.textContent.trim());
+
+        if (labels.length === 0) dropdownText.textContent = "Select Assistance Types";
+        else if (labels.length <= 2) dropdownText.textContent = labels.join(", ");
+        else dropdownText.textContent = `${labels.length} assistance types selected`;
+      }
+
+      checklistInputs.forEach(cb => cb.addEventListener('change', updateDropdownText));
+
+      document.querySelectorAll('.dropdown-menu label').forEach(label => {
+        label.addEventListener('click', e => e.stopPropagation());
+      });
+
+      mainForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        mainSuccess.style.display = 'none';
+        mainError.style.display = 'none';
+
+        mainSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        mainSubmitBtn.disabled = true;
+
+        const formData = new FormData(mainForm);
+
+        const selected = Array.from(checklistInputs)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        if (selected.length > 0) {
+          formData.append("Legal Assistance Types", selected.join(", "));
+        }
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => {
+            if (response.ok) {
+              mainForm.reset();
+              updateDropdownText();
+
+              mainSuccess.style.display = 'block';
+              mainSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+              setTimeout(() => mainSuccess.style.display = 'none', 8000);
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(() => {
+            mainError.style.display = 'block';
+            mainError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            setTimeout(() => mainError.style.display = 'none', 8000);
+          })
+          .finally(() => {
+            mainSubmitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+            mainSubmitBtn.disabled = false;
+          });
+      });
+    }
+  </script>
+  <script>
+    (function () {
+      const pcForm = document.getElementById('postcodeForm');
+      const pcInput = document.getElementById('postcode');
+      const pcErr = document.getElementById('pcErr');
+      const loader = document.getElementById('loader');
+      const card = document.getElementById('resultCard');
+      const courtName = document.getElementById('courtName');
+      const courtAddress = document.getElementById('courtAddress');
+      const courtDistance = document.getElementById('courtDistance');
+      const contactForm = document.getElementById('contactForm');
+      const startBtn = document.getElementById('startEvictionBtn');
+      const speakBtn = document.getElementById('speakSolicitorBtn');
+
+      const UK_PC_RX = /^\s*([A-Z]{1,2}\d[A-Z\d]?)\s*(\d[A-Z]{2})\s*$/i;
+
+      function normPostcode(pc) {
+        const m = pc.match(UK_PC_RX);
+        if (!m) return null;
+        return (m[1] + " " + m[2]).toUpperCase();
+      }
+
+      function show(el) { el.hidden = false; }
+      function hide(el) { el.hidden = true; }
+
+      // A static dataset of UK courts with their coordinates.
+      // In a real application, you might load this from a JSON file.
+      const courtLocations = [
+        { name: "Manchester Civil Justice Centre", address: "1 Bridge St W, Manchester M60 9DJ", lat: 53.483959, lng: -2.244644 },
+        { name: "Birmingham Civil and Family Justice Centre", address: "Priory Courts, 33 Bull St, Birmingham B4 6AF", lat: 52.48154, lng: -1.89437 },
+        { name: "Central London County Court", address: "26 Park Cres, London W1B 1HT", lat: 51.52041, lng: -0.1466 },
+        { name: "Liverpool Civil and Family Court", address: "35 Vernon St, Liverpool L2 2BX", lat: 53.4072, lng: -2.9916 },
+        { name: "Leeds Combined Court Centre", address: "1 Oxford Row, Leeds LS1 3BG", lat: 53.7997, lng: -1.5478 },
+        { name: "Newcastle Civil and Family Courts", address: "Barras Bridge, Newcastle upon Tyne NE1 8QF", lat: 54.9783, lng: -1.6186 },
+        { name: "Bristol Civil and Family Justice Centre", address: "2 Redcliff St, Bristol BS1 6GR", lat: 51.4526, lng: -2.5939 },
+      ];
+
+      // Haversine formula to calculate distance between two lat/lng points
+      function haversine(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius of the Earth in km
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c; // Distance in km
+      }
+
+      pcForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        hide(pcErr);
+        hide(card);
+        const raw = pcInput.value || "";
+        const pc = normPostcode(raw);
+        if (!pc) {
+          pcErr.textContent = 'Please enter a valid UK postcode (e.g. M40 8BB).';
+          show(pcErr);
+          return;
+        }
+        show(loader);
+
+        try {
+          // Step 1: Get the postcode's coordinates from Postcodes.io API
+          const geoResponse = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc)}`);
+
+          if (!geoResponse.ok) {
+            if (geoResponse.status === 404) {
+              pcErr.textContent = 'Postcode not found. Please check your entry.';
+            } else {
+              pcErr.textContent = 'Sorry — an error occurred while looking up the postcode.';
+            }
+            show(pcErr);
+            return;
+          }
+          const geoData = await geoResponse.json();
+          const { latitude, longitude } = geoData.result;
+
+          // Step 2: Find the nearest court using the Haversine formula
+          let nearestCourt = null;
+          let minDistance = Infinity;
+
+          courtLocations.forEach(court => {
+            const distance = haversine(latitude, longitude, court.lat, court.lng);
+            if (distance < minDistance) {
+              minDistance = distance;
+              nearestCourt = court;
+            }
+          });
+
+          // Update the result card with the nearest court's info
+          if (nearestCourt) {
+            courtName.textContent = nearestCourt.name;
+            courtAddress.textContent = nearestCourt.address;
+            courtDistance.textContent = `${minDistance.toFixed(1)} km away`;
+            show(card);
+          } else {
+            pcErr.textContent = 'No courts found in the dataset.';
+            show(pcErr);
+          }
+
+        } catch (err) {
+          pcErr.textContent = 'Sorry — we could not find a court for that postcode right now.';
+          show(pcErr);
+        } finally {
+          hide(loader);
+        }
+      });
+
+      // CTA buttons
+      startBtn?.addEventListener('click', () => {
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      speakBtn?.addEventListener('click', () => {
+        window.location.href = "tel:03333050381";
+      });
+
+      // Add some polish - auto-format postcode as user types
+      pcInput.addEventListener('input', (e) => {
+        let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+        if (value.length > 3) {
+          value = value.slice(0, -3) + ' ' + value.slice(-3);
+        }
+        if (value !== e.target.value) {
+          e.target.value = value;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
