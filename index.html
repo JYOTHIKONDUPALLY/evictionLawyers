@@ -22,15 +22,17 @@
   <link rel="stylesheet" href="CSS/ctaSection.css" />
   <link rel="stylesheet" href="CSS/Home.css" />
   <link rel="stylesheet" href="CSS/FixedCTA.css" />
-  <style>
-    :root {
-      --primary-orange: #cc6918;
+
+</head>
+<style>
+  :root {
+      --primary-orange: #f37810;
       --primary-teal: #14b8a6;
       --primary-green: #10b981;
       --primary-pink: #ec4899;
       --text-dark: #222;
       --text-light: #6b7280;
-      --bg-light: #f9fafb;
+      --bg-light: #e5e7eb;
       --white: #ffffff;
       --light-orange: #fef3e2;
     }
@@ -43,629 +45,18 @@
      .text-orange {
             color: var(--primary-orange) !important;
         }
-            .nav-link .active{
-      background-color: var(--primary-teal);
-      color:white;
-    }
 
-    .call-btn {
-      background-color: var(--primary-orange);
-      color: var(--white) !important;
-      padding: 0.6rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .call-btn:hover {
-      background-color: #ff5722;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-    }
-
-   
-
-    /* Benefit Banner - Teal Green */
-    .benefit-banner {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
-      color: var(--white);
-    }
-
-    .benefit-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .benefit-items {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .benefit-check {
-      background-color: rgba(255, 255, 255, 0.2);
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-    }
-
-    .benefit-separator {
-      width: 1px;
-      height: 20px;
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Mobile Slider */
-    .benefit-banner-mobile {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
-      color: var(--white);
-      overflow: hidden;
-    }
-
-    .mobile-slider-container {
-      position: relative;
-    }
-
-    .mobile-slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 400%;
-    }
-
-    .mobile-slide {
-      flex: 0 0 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.5rem;
-    }
-
-    .slide-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .indicator.active {
-      background-color: var(--white);
-      width: 24px;
-      border-radius: 4px;
-    }
-    /* Compact header */
-.navbar {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  html {
+  font-size: 90%;
 }
 
-.navbar-brand img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.navbar-brand:hover img {
-  transform: scale(1.05);
-}
-
-/* Nav links */
-.nav-link {
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #cc6918;
-}
-
-/* Dropdown */
-.dropdown-menu {
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: none;
-}
-
-.dropdown-item:hover {
-  background-color: #cc6918;
-  color: #fff;
-}
-
-/* Divider */
-.text-muted {
-  font-weight: 300;
-}
-
-/* Mobile adjustments */
-@media (max-width: 991px) {
-  .text-muted {
-    display: none;
-  }
-  .navbar .dropdown-menu {
-    width: 100%;
+/* On small screens reduce ALL font sizes by 10% */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;   /* ↓ global reduction */
   }
 }
-/* Shrink effect */
-.navbar {
-  transition: all 0.3s ease;
-}
-
-.navbar.shrink {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.navbar.shrink .navbar-brand img {
-  width: 38px;
-  height: 38px;
-  transition: all 0.3s ease;
-}
-
-.navbar.shrink .nav-link {
-  font-size: 0.95rem;
-}
-
-/* start */
-/* Navbar Styles */
-    .navbar {
-      background-color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 0.75rem 0;
-      transition: all 0.3s ease;
-    }
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-dark) !important;
-    }
-
-    .navbar-brand img {
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .navbar-brand:hover img {
-      transform: scale(1.05);
-    }
-
-    .nav-link {
-      color: #333 !important;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-link:hover {
-      color: #cc6918 !important;
-    }
-
-    .dropdown-menu {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border: none;
-    }
-
-    .dropdown-item:hover {
-      background-color: #cc6918;
-      color: #fff;
-    }
-
-    .text-muted {
-      font-weight: 300;
-    }
-
-    /* Shrink effect */
-    .navbar.shrink {
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .navbar.shrink .navbar-brand img {
-      width: 38px !important;
-      height: 38px !important;
-    }
-
-    .navbar.shrink .nav-link {
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 991px) {
-      .text-muted {
-        display: none;
-      }
-      .navbar .dropdown-menu {
-        width: 100%;
-      }
-    }
-
-    /* Mobile Call Bar */
-    .mobile-call-bar {
-      background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .mobile-call {
-      color: var(--primary-orange);
-      font-weight: 600;
-    }
-    
-footer {
-  background: black;
-  color: white;
-  padding: 40px 0;
-}
-
-footer a {
-  color: #ffe5cc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.coverage-section {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--text-dark);
-  margin: 0 -15px;
-  padding: 3rem 2rem;
-  border-top: 3px solid rgba(255, 255, 255, 0.3);
-}
-
-.coverage-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--text-dark);
-}
-
-.coverage-description {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.top-rated-badge {
-  background: white;
-  color: var(--primary-orange);
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 2px solid rgba(208, 123, 57, 0.2);
-  font-weight: 600;
-}
-
-.footer-link {
-  color: var(--text-muted);
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: var(--text-light) !important;
-  transform: translateX(5px);
-  text-decoration: underline !important;
-}
-
-.coverage-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(204, 105, 24, 0.1);
-  transition: all 0.3s ease;
-  display: block;
-  font-weight: 500;
-}
-
-.coverage-link:hover {
-  color: var(--primary-orange);
-  padding-left: 0.75rem;
-  border-bottom-color: var(--text-primary);
-  background: rgba(195, 191, 188, 0.05);
-}
-
-.coverage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-.google-reviews-carousel {
-  background-color: #fff;
-  padding: 4rem 0;
-  font-family: "Poppins", sans-serif;
-}
-
-.reviews-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  text-align: center;
-  gap: 1rem;
-}
-
-.google-logo {
-  width: 100px;
-}
-
-.review-summary h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #111;
-}
-
-.review-summary .stars {
-  color: #fbbc04;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-}
-
-.review-summary p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.review-summary a {
-  color: #cc6918;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.review-summary a:hover {
-  text-decoration: underline;
-}
-
-/* --- Carousel Styles --- */
-.carousel-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 1.5rem;
-  scroll-snap-align: start;
-  padding: 0 1rem;
-}
-
-.review-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: start;
-  min-height: 220px;
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-.review-stars {
-  color: #fbbc04;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.review-card h4 {
-  color: #111;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.review-card p {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-.reviewer {
-  display: block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* --- Responsive --- */
-@media (max-width: 991px) {
-  .review-card {
-    flex: 0 0 calc(50% - 1rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .review-card {
-    flex: 0 0 100%;
-  }
-}
-.cta-section {
-     /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
-     background-color: var(--primary-teal);
-     /* border-radius: 20px; */
-     padding: 2rem 1.5rem;
-     margin: 2rem 0;
-     position: relative;
-     overflow: hidden;
-     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
- }
-
- .cta-section::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background:
-         radial-gradient(circle at 20% 80%, rgba(19, 136, 125, 0.1) 0%, transparent 50%),
-         radial-gradient(circle at 80% 20%, rgba(19, 136, 125, 0.08) 0%, transparent 50%),
-         radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
- }
-
- .cta-content {
-     position: relative;
-     z-index: 1;
-     padding: 1rem 3rem;
- }
-
- .cta-title {
-     font-size: 1.3rem;
-     font-weight: 700;
-     color: #ffffff;
-     margin-bottom: 1rem;
-     line-height: 1.2;
-     text-align: left;
- }
-
- .cta-text {
-     font-size: 0.9rem;
-     color: rgba(255, 255, 255, 0.85);
-     margin-bottom: 0;
-     line-height: 1.5;
- }
-
- .cta-buttons {
-     display: flex;
-     gap: 1rem;
-     align-items: center;
-     justify-content: space-around;
-     height: 100%;
- }
-
- 
-
- /* Responsive Design */
- @media (max-width: 768px) {
-     .cta-section {
-         padding: 2rem 1.5rem;
-         text-align: center;
-     }
-
-     .cta-title {
-         font-size: 1rem;
-         text-align: center;
-     }
-
-     .cta-text {
-         text-align: center;
-         margin-bottom: 2rem;
-     }
-
-     .cta-buttons {
-         flex-direction: column;
-         align-items: center;
-         width: 100%;
-     }
-
- }
-
- @media (max-width: 576px) {
-     .cta-section {
-         padding: 1.5rem 1rem;
-         margin: 2rem 0;
-     }
-
-     .cta-title {
-         font-size: 0.95rem;
-     }
-
-     .cta-text {
-         font-size: 0.7rem;
-     }
-
-     .cta-buttons {
-         gap: 0.75rem;
-     }
- }
-
- /* Additional Enhancement: Pulse Effect */
- @keyframes pulse {
-     0% {
-         box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     }
-
-     50% {
-         box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
-     }
-
-     100% {
-         box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     }
- }
-
- .cta-button-orange:focus {
-     animation: pulse 2s infinite;
-     outline: none;
- }
- .cta-section-button-orange {
-     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-     color: #ffffff;
-     border: none;
-     padding: 0.7rem 1rem;
-     border-radius: 12px;
-     font-weight: 800;
-     font-size: 1rem;
-     text-decoration: none;
-     transition: all 0.3s ease;
-     box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     position: relative;
-     overflow: hidden;
-     min-width: 200px;
-     text-align: center;
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
-     white-space: nowrap;
- }
- .cta-section-button-orange:hover{
-    background-color: white;
-    color:var(--text-dark)
- } /* Hero Section */
+ /* Hero Section */
     .hero {
       background: linear-gradient(
                 135deg, 
@@ -722,7 +113,6 @@ footer a:hover {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--text-dark);
-      margin-bottom: 1.5rem;
     }
 
     .form-control {
@@ -887,6 +277,9 @@ footer a:hover {
       .contact-card {
         margin-top: 2rem;
       }
+      .contact-card h3 {
+text-align: center;
+    }
 
       .benefit-separator {
         display: none;
@@ -936,9 +329,9 @@ footer a:hover {
 
 /* --- Right Card --- */
 .content-nav-card {
-  background-color: #f9fafb;
+  background-color: #e5e7eb;
   border-radius: 10px;
-  padding: 2.5rem;
+  padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -955,7 +348,7 @@ footer a:hover {
 }
 
 .content-nav-card ul li {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .content-nav-card ul li a {
@@ -970,12 +363,12 @@ footer a:hover {
 }
 
 .content-nav-card ul li a:hover {
-  color: #cc6918;
+  color: #f37810;
 }
 
 .content-nav-card i {
   font-size: 0.5rem;
-  color: #00bcd4;
+  color:var(--primary-teal);
   margin-top: 6px;
 }
 
@@ -1001,7 +394,7 @@ footer a:hover {
 }
 
 .process-card {
-  background: #f9fafb;
+  /* background: #e5e7eb; */
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -1030,12 +423,13 @@ footer a:hover {
 .arrow-img {
   width: 40px;
   height: 40px;
-  filter: hue-rotate(100deg) brightness(1.1);
+  /* filter: hue-rotate(100deg) brightness(1.1); */
   border-radius: 50%;
 }
 
 .arrow-icon {
   padding: 0;
+  display:none
   
 }
 
@@ -1050,7 +444,7 @@ footer a:hover {
 
 /* why choose us section */
 .why-choose-us {
-  background-color: #f9fafb;
+  /* background-color: #e5e7eb; */
 }
 
 .why-choose-us h2 {
@@ -1238,7 +632,7 @@ footer a:hover {
 /*court finder */
 /* General Section Styling */
 .our-location {
-  background-color: #f9fafb;
+  /* background-color: #e5e7eb; */
 }
 
 .our-location h1 {
@@ -1349,7 +743,11 @@ a {
 .contact-us-home-fields {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
+}
+
+.contact-us-home-fields > * {
+  font-size:14px;
 }
 
 .input-row-full-name {
@@ -1363,7 +761,7 @@ a {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 15px;
@@ -1386,7 +784,7 @@ a {
 }
 
 .form-check {
-  font-size: 13px;
+  font-size: 10px;
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
@@ -1438,6 +836,53 @@ textarea {
   align-items: center;
   justify-content: center;
 }
+
+.icon-circle {
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+         .bg-orange {
+            background-color: var(--primary-orange) !important;
+        }
+
+        .bg-light-orange {
+            background-color: var(--light-orange) !important;
+        }
+
+        .text-orange {
+            color: var(--primary-orange) !important;
+        }
+#faq .accordion-button {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background-color: #0d6efd; /* Bootstrap primary or your theme color */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13,110,253,0.2);
+}
+
+#faq .accordion-item {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#faq .accordion-body {
+  background: #e5e7eb;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#faq .accordion-button:focus {
+  box-shadow: none;
+}
 .fixed-cta {
   position: fixed;
   bottom: 0;
@@ -1446,81 +891,571 @@ textarea {
   background: var(--accent-teal, #009688);
   color: #fff;
   z-index: 9999;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 
-.fixed-cta .cta-nav {
+.cta-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
+  align-items: stretch;
+  text-align: center;
 }
 
-.cta-button-nav {
+.cta-item {
   flex: 1;
-  text-align: center;
+  padding: 12px 0;
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
-  font-size: 0.85rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.3s ease;
 }
 
-.cta-button-nav .cta-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
+.cta-item i {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.cta-item span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Dividers */
+.cta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 8px 0;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+}
+
+footer a {
+  color: #ffe5cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.coverage-section {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  margin: 0 -15px;
+  padding: 3rem 2rem;
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.coverage-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.coverage-description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.top-rated-badge {
+  background: white;
+  color: var(--primary-orange);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(208, 123, 57, 0.2);
+  font-weight: 600;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--text-light) !important;
+  transform: translateX(5px);
+  text-decoration: underline !important;
+}
+
+.coverage-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(204, 105, 24, 0.1);
+  transition: all 0.3s ease;
+  display: block;
+  font-weight: 500;
+}
+
+.coverage-link:hover {
+  color: var(--primary-orange);
+  padding-left: 0.75rem;
+  border-bottom-color: var(--text-primary);
+  background: rgba(195, 191, 188, 0.05);
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.icoLogo{
+  background-color: white;
+  width: 200px;
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.google-reviews-carousel {
+  background-color: #fff;
+  padding: 4rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.reviews-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.google-logo {
+  width: 100px;
+}
+
+.review-summary h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #111;
+}
+
+.review-summary .stars {
+  color: #fbbc04;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.review-summary p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.review-summary a {
+  color: #f37810;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.review-summary a:hover {
+  text-decoration: underline;
+}
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1a73e8;        /* blue circle */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* --- Carousel Styles --- */
+.carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  scroll-snap-align: start;
+  padding: 0 1rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 320px;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap:20px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+}
+
+.verified {
+  color: #1a73e8;
+  font-size: 14px;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #777;
+}
+
+.review-stars i {
+  color: #fbbc04;
+  margin-right: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.review-readmore {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+  .review-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 100%;
+  }
+}
+    .nav-link .active{
+      background-color: var(--primary-teal);
+      color:white;
+    }
+
+    .call-btn {
+      background-color: var(--primary-orange);
+      color: var(--white) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .call-btn:hover {
+      background-color: #ff5722;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    }
+
+   
+
+    /* Benefit Banner - Teal Green */
+    .benefit-banner {
+      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+      padding: 1rem 0;
+      color: var(--white);
+    }
+
+    .benefit-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .benefit-items {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .benefit-check {
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .benefit-separator {
+      width: 1px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Mobile Slider */
+    .benefit-banner-mobile {
+      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+      padding: 1rem 0;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .mobile-slider-container {
+      position: relative;
+    }
+
+    .mobile-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%;
+    }
+
+    .mobile-slide {
+      flex: 0 0 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+    }
+
+    .slide-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .indicator.active {
+      background-color: var(--white);
+      width: 24px;
+      border-radius: 4px;
+    }
+    /* Compact header */
+.navbar {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.navbar-brand img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+/* Nav links */
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #f37810;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f37810;
+  color: #fff;
+}
+
+/* Divider */
+.text-muted {
+  font-weight: 300;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+  .text-muted {
+    display: none;
+  }
+  .navbar .dropdown-menu {
+    width: 100%;
+  }
+}
+/* Shrink effect */
+.navbar {
   transition: all 0.3s ease;
 }
 
-.cta-button-nav i {
-  font-size: 1.2rem;
+.navbar.shrink {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.cta-button-nav:hover .cta-icon:hover {
-  background: #fff;
-  color:black;
-  transform: scale(1.05);
-}
-.cta-icon:hover>a{
-  color:black! important;
+.navbar.shrink .navbar-brand img {
+  width: 38px;
+  height: 38px;
+  transition: all 0.3s ease;
 }
 
-.cta-button-nav:hover span {
-  opacity: 0.9;
+.navbar.shrink .nav-link {
+  font-size: 0.95rem;
 }
 
-/* Pulse effect for call icon */
-@keyframes phonePulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
+/* start */
+/* Navbar Styles */
+    .navbar {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
 
-.phone-pulse i {
-  animation: phonePulse 1.5s infinite;
-}
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark) !important;
+    }
+
+    .navbar-brand img {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-brand:hover img {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      color: #333 !important;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: #f37810 !important;
+    }
+
+    .dropdown-menu {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f37810;
+      color: #fff;
+    }
+
+    .text-muted {
+      font-weight: 300;
+    }
+
+    /* Shrink effect */
+    .navbar.shrink {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar.shrink .navbar-brand img {
+      width: 38px !important;
+      height: 38px !important;
+    }
+
+    .navbar.shrink .nav-link {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 991px) {
+      .text-muted {
+        display: none;
+      }
+      .navbar .dropdown-menu {
+        width: 100%;
+      }
+    }
+
+    /* Mobile Call Bar */
+    .mobile-call-bar {
+      background-color: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .mobile-call {
+      color: var(--primary-orange);
+      font-weight: 600;
+    }
 
 
 
 
 
-
-
-
-
-  </style>
-</head>
+</style>
 
 <body>
 
@@ -1529,14 +1464,12 @@ textarea {
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/Eviction_lawyers.png" alt="logo" width="45" height="45" class="me-2" />
-        <span class="fw-bold text-dark">Eviction Lawyers</span>
+        <img src="assets/E logo 1.png" alt="logo" width="150" height="70" />
       </a>
 
       <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a href="#contact" class="d-block d-md-none btn btn-sm"
+        style="background-color: #f37810; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
 
       <!-- Navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -1545,10 +1478,10 @@ textarea {
             <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="section8-21.html">Section 8/21</a>
+            <a class="nav-link" href="section8-21.html">Section 8/21 Notice</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="PriorityEviction.html"> Priority Eviction</a>
+            <a class="nav-link" href="PriorityEviction.html">Eviction Process</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ComplexCases.html">Complex Cases</a>
@@ -1586,14 +1519,6 @@ textarea {
       </div>
     </div>
   </nav>
-
-  <!-- Mobile Call Bar -->
-  <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
-    <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none"
-      style="border-bottom: 2px solid #cc6918;">Call Us: 0333 050 5381</a>
-    <a href="#contact" class="btn btn-sm"
-      style="background-color: #cc6918; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
-  </div>
 
   <!-- Benefit Banner -->
   <div class="container-fluid p-0">
@@ -1682,20 +1607,27 @@ textarea {
             <div class="google-review-box d-inline-flex align-items-center mt-3 p-2 px-3">
               <img src="../assets/google.png" alt="Google Logo" class="me-2" width="40" height="40">
               <span class="rating-number">4.8</span>
-              <i class="fas fa-star star ms-1"></i>
-              <span class="ms-2 text-muted">Google Reviews</span>
+              <div class="me-2" style="font-size:1.2rem; color:#f7c948;">
+                <!-- 4.8 stars (visual) -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="ms-2 text-muted fw-semibold">Google Reviews</span>
             </div>
           </a>
 
-          <a href="#contactForm" class="hero-btn mt-3">
-            <i class="fas fa-rocket me-2"></i>Start Eviction Today
+          <div><a href="#contactForm" class="hero-btn mt-3">
+            Start Eviction Today
           </a>
+          </div>
         </div>
 
 
         <div class="col-lg-6">
           <div class="contact-card p-4 bg-white shadow rounded">
-            <h3>Contact Us</h3>
+            <h2>Contact Us</h2>
+            <p class="mb-2">Contact us to see how we can help today</p>
             <form id="contactForm" method=' POST'>
               <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
               <div class="mb-2">
@@ -1715,7 +1647,7 @@ textarea {
                   name="reason"></textarea>
               </div>
               <button type="submit" class="btn w-100" id="heroSubmitBtn"
-                style="background-color:#cc6918;color:white;"><i class="fas fa-paper-plane me-2"></i>Submit</button>
+                style="background-color:#f37810;color:white;">Submit</button>
             </form>
             <div class="form-success" id="heroFormSuccess">
               <strong>Success!</strong> Your message has been sent successfully.
@@ -1731,11 +1663,11 @@ textarea {
   </section>
   <section class="tenant-eviction-section py-5" id="tenant-eviction">
     <div class="container">
-      <h1 class="text-center mb-4">What Is Eviction in England & Wales?</h1>
       <div class="eviction-wrapper d-flex ">
 
         <!-- Left Column -->
         <div class="eviction-left">
+          <h3 class="text-center mb-4">What Is Eviction in England & Wales?</h3>
           <p>
             Eviction is the formal legal process for regaining possession of a property when a tenancy ends or
             obligations are not met. Landlords must comply with the Housing Act 1988, Housing Act 1996, and the Renters
@@ -1752,17 +1684,20 @@ textarea {
 
         <!-- Right Column -->
         <div class="eviction-right">
-          <div class="content-nav-card">
-            <h4>Page content navigation</h4>
-            <ul>
-              <li><a href="#tenant-eviction"><i class="fas fa-square-full"></i>What Is Eviction in England & Wales?</a>
-              </li>
-              <li><a href="#our-process"><i class="fas fa-square-full"></i>Our eviction process</a></li>
-              <li><a href="#why-choose-us"><i class="fas fa-square-full"></i>Why Choose Us</a></li>
-              <li><a href="#popular-services"><i class="fas fa-square-full"></i>Popular Services</a></li>
-              <li><a href="#Locations-We-Serve"><i class="fas fa-square-full"></i>Location We Serve</a></li>
-              <li><a href="#faq"><i class="fas fa-square-full"></i>Frequently asked questions</a></li>
-            </ul>
+          <div class="content-nav">
+            <div class="content-nav-card">
+              <h4 class="mb-4">Page content navigation</h4>
+              <ul>
+                <li><a href="#tenant-eviction"><i class="fas fa-square-full"></i>What Is Eviction in England &
+                    Wales?</a>
+                </li>
+                <li><a href="#our-process"><i class="fas fa-square-full"></i>Our eviction process</a></li>
+                <li><a href="#why-choose-us"><i class="fas fa-square-full"></i>Why Choose Us</a></li>
+                <li><a href="#popular-services"><i class="fas fa-square-full"></i>Popular Services</a></li>
+                <li><a href="#Locations-We-Serve"><i class="fas fa-square-full"></i>Location We Serve</a></li>
+                <li><a href="#faq"><i class="fas fa-square-full"></i>Frequently asked questions</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -1780,7 +1715,7 @@ textarea {
             <div class="d-flex align-items-center mb-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/375px-Google_2015_logo.svg.png"
-                alt="Google" style="width:72px; height:auto;">
+                alt="Google" style="width:200px; height:auto;">
             </div>
 
             <h3 class="mb-2" style="font-weight:700; font-size:1.4rem; color:#111;">Excellent</h3>
@@ -1796,16 +1731,16 @@ textarea {
             </div>
 
             <p class="mb-2 text-muted">Based on <a href="https://share.google/AfyHvaGR7h1sTtiTq" target="_blank"
-                rel="noopener noreferrer" class="text-decoration-underline" style="color:#cc6918;">67 reviews</a></p>
+                rel="noopener noreferrer" class="text-decoration-underline" style="color:#f37810;">67 reviews</a></p>
 
             <p class="small text-muted mb-3">
               Real, verified Google reviews from landlords and agents who used our eviction services.
             </p>
 
-            <a href="https://share.google/AfyHvaGR7h1sTtiTq" target="_blank" rel="noopener noreferrer" class="btn w-100"
-              style="background-color:#cc6918; color:#fff; border-radius:6px;">
-              Read all reviews on Google
-            </a>
+            <!-- <a href="https://share.google/AfyHvaGR7h1sTtiTq" target="_blank" rel="noopener noreferrer" class="btn w-100"
+              style="background-color:#f37810; color:#fff; border-radius:6px;">
+              Read More
+            </a> -->
           </div>
         </div>
 
@@ -1820,6 +1755,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="L"></div><h4>Ellite</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1830,7 +1768,7 @@ textarea {
                           Total Eviction helped me when I wanted to sell a property with a tenant who didn’t want to
                           leave.
                         </p>
-                        <div class="text-muted fw-semibold">— Estelle</div>
+                      
                       </div>
                     </div>
                   </div>
@@ -1838,6 +1776,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="S"></div><h4>Suzanne</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1847,7 +1788,6 @@ textarea {
                         <p class="text-muted">
                           I was paid out for rent owed, and legal fees repaid — efficient and professional.
                         </p>
-                        <div class="text-muted fw-semibold">— Suzanne</div>
                       </div>
                     </div>
                   </div>
@@ -1855,6 +1795,9 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="H"></div><h4>Harry</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1864,7 +1807,6 @@ textarea {
                         <p class="text-muted">
                           They handled my case from start to finish and kept me updated throughout.
                         </p>
-                        <div class="text-muted fw-semibold">— Harry</div>
                       </div>
                     </div>
                   </div>
@@ -1877,6 +1819,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="D"></div><h4>David</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1886,7 +1831,6 @@ textarea {
                         <p class="text-muted">
                           They secured possession of my property quickly and professionally.
                         </p>
-                        <div class="text-muted fw-semibold">— David</div>
                       </div>
                     </div>
                   </div>
@@ -1894,6 +1838,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="L"></div><h4>Linda</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1903,7 +1850,6 @@ textarea {
                         <p class="text-muted">
                           The team handled my Section 21 notice perfectly, guiding me step by step.
                         </p>
-                        <div class="text-muted fw-semibold">— Lisa</div>
                       </div>
                     </div>
                   </div>
@@ -1911,6 +1857,9 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="R"></div><h4>Robyn</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1920,7 +1869,6 @@ textarea {
                         <p class="text-muted">
                           Lovely and supportive staff who help through each step — highly recommended.
                         </p>
-                        <div class="text-muted fw-semibold">— Robyn</div>
                       </div>
                     </div>
                   </div>
@@ -1933,6 +1881,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="C"></div><h4>Casey</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1942,7 +1893,6 @@ textarea {
                         <p class="text-muted">
                           Supportive and knowledgeable — resolved everything efficiently.
                         </p>
-                        <div class="text-muted fw-semibold">— Casey</div>
                       </div>
                     </div>
                   </div>
@@ -1950,6 +1900,9 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="P"></div><h4>Prabhakara</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1959,7 +1912,6 @@ textarea {
                         <p class="text-muted">
                           Impressed with their speed and service — would recommend to landlords.
                         </p>
-                        <div class="text-muted fw-semibold">— Prabhakara</div>
                       </div>
                     </div>
                   </div>
@@ -1967,6 +1919,9 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                         <div class="d-flex gap-3">
+                        <div class="user-avatar" data-name="L"></div><h4>LW</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1976,7 +1931,6 @@ textarea {
                         <p class="text-muted">
                           The solicitors were communicative and got great results.
                         </p>
-                        <div class="text-muted fw-semibold">— LW</div>
                       </div>
                     </div>
                   </div>
@@ -2102,7 +2056,7 @@ textarea {
         <!-- Left: Video -->
         <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="video-wrapper">
-            <video autoplay muted loop playsinline class="w-100 rounded-4 shadow">
+            <video autoplay muted loop playsinline class="w-75 rounded-4 shadow">
               <source src="../assets/video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -2194,7 +2148,7 @@ textarea {
             <img src="assets/law-firm-8306442_1280.jpg" alt="Service" class="card-image">
             <div class="card-content">
               <h3 class="card-title">Rent Recovery & Advice</h3>
-             <a href="arrears.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <a href="arrears.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2207,8 +2161,9 @@ textarea {
               src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               alt="Service" class="card-image">
             <div class="card-content">
-              <h3 class="card-title">Priority Super Package (Contested Case Coverage)</h3>
-              <a href="PriorityEviction.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <h3 class="card-title">Eviction Process</h3>
+              <a href="PriorityEviction.html" class="read-more-btn" role="button"
+                aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2219,7 +2174,7 @@ textarea {
           <div class="service-card-new">
             <img src="assets/contract.png" alt="Service" class="card-image">
             <div class="card-content">
-              <h3 class="card-title">Guaranteed Eviction (Uncontested)</h3>
+              <h3 class="card-title">Wales Eviction Guide</h3>
               <a href="contested.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
@@ -2232,7 +2187,7 @@ textarea {
             <img src="assets/about.jpg" alt="Service" class="card-image">
             <div class="card-content">
               <h3 class="card-title">Eviction Advice & Notice</h3>
-             <a href="guide.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <a href="guide.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2244,7 +2199,7 @@ textarea {
   <section class="our-location py-5" id="Locations-We-Serve">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="fw-bold">Our Location</h1>
+        <h1 class="fw-bold">Some Areas We Cover</h1>
         <p class="text-muted w-75 mx-auto">
           We provide eviction and housing legal services for landlords, tenants, and agents across England and Wales.
           Whether you're based in a major city or surrounding area, we can help.
@@ -2334,7 +2289,7 @@ textarea {
   <section class="section section-alt mt-4 mb-md-2 py-md-4">
     <div class="container">
       <h2 class="text-center">Start Your Eviction Today</h2>
-      <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">
+      <p class="text-center" style="font-size: 14px; margin-bottom: 1rem;">
         Complete our 30-second form and we'll call you back within 24 hours
       </p>
 
@@ -2406,7 +2361,7 @@ textarea {
                 <!-- Description -->
                 <div class="form-group">
                   <label for="message">Brief Description of Situation</label>
-                  <textarea id="message" name="message" rows="3"
+                  <textarea id="message" name="message" rows="2"
                     placeholder="Tell us about your situation..."></textarea>
                 </div>
 
@@ -2422,9 +2377,9 @@ textarea {
                 </div>
 
                 <!-- Submit -->
-                <div class="text-center mt-3">
+                <div class="text-center mt-1">
                   <button type="submit" id="mainSubmitBtn" class="mainSubmitBtn cta-button-orange">
-                    <i class="fas fa-paper-plane"></i> Start My Eviction Now
+                  Start My Eviction Now
                   </button>
                 </div>
 
@@ -2565,33 +2520,36 @@ textarea {
   </section>
   <!-- Fixed CTA (Mobile Only) -->
   <div class="fixed-cta d-lg-none" id="fixedCta">
-    <div class="container-fluid px-0">
-      <div class="cta-nav d-flex justify-content-around align-items-center">
+    <div class="cta-nav">
 
-        <a href="tel:+4403333050381" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <span>Call</span>
-        </a>
+      <!-- Phone -->
+      <a href="tel:+4403333050381" class="cta-item">
+        <i class="fas fa-phone"></i>
+        <span>Phone</span>
+      </a>
 
-        <a href="mailto:info@evictionhelp.co.uk" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <span>Email</span>
-        </a>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
 
-        <a href="#contactForm" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-comment-dots"></i>
-          </div>
-          <span>Enquire</span>
-        </a>
+      <!-- Enquiry -->
+      <a href="mailto:info@evictionhelp.co.uk" class="cta-item">
+        <i class="fas fa-envelope"></i>
+        <span>Enquiry</span>
+      </a>
 
-      </div>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
+
+      <!-- Menu -->
+      <a href="#" class="cta-item" id="ctaMenuBtn">
+        <i class="fas fa-bars"></i>
+        <span>Menu</span>
+      </a>
+
     </div>
   </div>
+
+
   <footer class="mt-5">
     <div class="container">
       <div class="row">
@@ -2611,26 +2569,31 @@ textarea {
             panel solicitors, who are authorised and regulated by the Solicitors Regulation Authority (SRA).
           </p>
 
-          <div class="d-block d-md-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+          <div class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
             <!-- Start of SRA Digital Badge code -->
             <div class="yoshkidiv">
-              <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
+              <img alt="Verify SRA Membership" width="200" height="100" style="margin-bottom: 30px;" src="./assets/SRA logo.png" />
             </div>
             <!-- End of SRA Digital Badge code -->
             <div class="icoLogo">
-              <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+              <img src="assets/icoLogo.png" alt="ICO Logo" width="200" height="150">
             </div>
           </div>
         </div>
 
         <!-- Right Side: Links Section -->
         <div class="col-md-6 text-center text-md-start ">
-          <div class="text-center mb-4">
-            <div class="top-rated-badge">
-              <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
-              <span>Top-Rated Legal Services</span>
-            </div>
-          </div>
+          <div class=" d-flex align-items-center  justify-content-center flex-column mb-4">
+             <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/375px-Google_2015_logo.svg.png"
+                alt="Google" style="width:70px; height:auto;">
+                <div class="me-2" style="font-size:1.2rem; color:#f7c948;">
+                <!-- 4.8 stars (visual) -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i> <span style="color: white;">4.8</span>
+              </div>
+                      </div>
           <div class="row text-center text-md-start g-4">
             <!-- Services -->
             <div class="col-md-4 mb-2">
@@ -2711,10 +2674,7 @@ textarea {
       <div class="coverage-section">
         <div class="text-center mb-4">
           <h3 class="coverage-title">Some Areas We Cover</h3>
-          <p class="coverage-description">
-            We provide assistance across England and Wales. Click your city below to find eviction lawyers near you:
-          </p>
-        </div>
+                  </div>
         <div class="coverage-grid">
           <div class="coverage-column">
             <ul class="list-unstyled">
@@ -2802,6 +2762,11 @@ textarea {
         navbar.classList.remove("shrink");
       }
     });
+    document.querySelectorAll(".user-avatar").forEach(el => {
+      const name = el.getAttribute("data-name");
+      el.textContent = name.charAt(0).toUpperCase();
+    });
+
   </script>
 
   <script>
@@ -3063,6 +3028,29 @@ textarea {
       });
     })();
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const ctaMenuBtn = document.getElementById("ctaMenuBtn");
+    const navbarCollapse = document.getElementById("navbarNavDropdown");
+
+    // Bootstrap collapse instance
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+    });
+
+    // Toggle on CTA Menu click
+    ctaMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (navbarCollapse.classList.contains("show")) {
+            bsCollapse.hide();
+        } else {
+            bsCollapse.show();
+        }
+    });
+});
+</script>
+
 
 </body>
 

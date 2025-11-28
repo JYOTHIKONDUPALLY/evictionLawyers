@@ -134,7 +134,7 @@
 }
 
 .nav-link:hover {
-  color: #cc6918;
+  color: #f37810;
 }
 
 /* Dropdown */
@@ -145,7 +145,7 @@
 }
 
 .dropdown-item:hover {
-  background-color: #cc6918;
+  background-color: #f37810;
   color: #fff;
 }
 
@@ -215,7 +215,7 @@
     }
 
     .nav-link:hover {
-      color: #cc6918 !important;
+      color: #f37810 !important;
     }
 
     .dropdown-menu {
@@ -225,7 +225,7 @@
     }
 
     .dropdown-item:hover {
-      background-color: #cc6918;
+      background-color: #f37810;
       color: #fff;
     }
 

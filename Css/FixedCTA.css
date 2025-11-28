@@ -6,67 +6,38 @@
   background: var(--accent-teal, #009688);
   color: #fff;
   z-index: 9999;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 
-.fixed-cta .cta-nav {
+.cta-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
+  align-items: stretch;
+  text-align: center;
 }
 
-.cta-button-nav {
+.cta-item {
   flex: 1;
-  text-align: center;
+  padding: 12px 0;
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
-  font-size: 0.85rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.3s ease;
 }
 
-.cta-button-nav .cta-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.25rem;
-  transition: all 0.3s ease;
+.cta-item i {
+  font-size: 24px;
+  margin-bottom: 6px;
 }
 
-.cta-button-nav i {
-  font-size: 1.2rem;
+.cta-item span {
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.cta-button-nav:hover .cta-icon:hover {
-  background: #fff;
-  color:black;
-  transform: scale(1.05);
-}
-.cta-icon:hover>a{
-  color:black! important;
-}
-
-.cta-button-nav:hover span {
-  opacity: 0.9;
-}
-
-/* Pulse effect for call icon */
-@keyframes phonePulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.phone-pulse i {
-  animation: phonePulse 1.5s infinite;
+/* Dividers */
+.cta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 8px 0;
 }

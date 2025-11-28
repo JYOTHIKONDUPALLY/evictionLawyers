@@ -86,3 +86,13 @@ footer a:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
+
+.icoLogo{
+  background-color: white;
+  width: 200px;
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
