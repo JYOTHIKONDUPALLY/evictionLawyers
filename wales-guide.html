@@ -22,1521 +22,1691 @@
   <link rel="stylesheet" href="CSS/ctaSection.css" />
   <link rel="stylesheet" href="CSS/Home.css" />
   <link rel="stylesheet" href="CSS/FixedCTA.css" />
-   <style>
-    :root {
-      --primary-orange: #f37810;
-      --primary-teal: #14b8a6;
-      --primary-green: #10b981;
-      --primary-pink: #ec4899;
-      --text-dark: #222;
-      --text-light: #6b7280;
-      --bg-light: #e5e7eb;
-      --white: #ffffff;
-      --light-orange: #fef3e2;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-     .text-orange {
-            color: var(--primary-orange) !important;
-        }
-            .nav-link .active{
-      background-color: var(--primary-teal);
-      color:white;
-    }
-
-    .call-btn {
-      background-color: var(--primary-orange);
-      color: var(--white) !important;
-      padding: 0.6rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .call-btn:hover {
-      background-color: #ff5722;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-    }
-
-   
-
-    /* Benefit Banner - Teal Green */
-    .benefit-banner {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
-      color: var(--white);
-    }
-
-    .benefit-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .benefit-items {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .benefit-check {
-      background-color: rgba(255, 255, 255, 0.2);
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-    }
-
-    .benefit-separator {
-      width: 1px;
-      height: 20px;
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Mobile Slider */
-    .benefit-banner-mobile {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
-      color: var(--white);
-      overflow: hidden;
-    }
-
-    .mobile-slider-container {
-      position: relative;
-    }
-
-    .mobile-slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 400%;
-    }
-
-    .mobile-slide {
-      flex: 0 0 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.5rem;
-    }
-
-    .slide-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .indicator.active {
-      background-color: var(--white);
-      width: 24px;
-      border-radius: 4px;
-    }
-    /* Compact header */
-.navbar {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
-
-.navbar-brand img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.navbar-brand:hover img {
-  transform: scale(1.05);
-}
-
-/* Nav links */
-.nav-link {
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #f37810;
-}
-
-/* Dropdown */
-.dropdown-menu {
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: none;
-}
-
-.dropdown-item:hover {
-  background-color: #f37810;
-  color: #fff;
-}
-
-/* Divider */
-.text-muted {
-  font-weight: 300;
-}
-
-/* Mobile adjustments */
-@media (max-width: 991px) {
-  .text-muted {
-    display: none;
+</head>
+<style>
+  :root {
+    --primary-orange: #f37810;
+    --primary-teal: #14b8a6;
+    --primary-green: #10b981;
+    --primary-pink: #ec4899;
+    --text-dark: #222;
+    --text-light: #6b7280;
+    --bg-light: #e5e7eb;
+    --white: #ffffff;
+    --light-orange: #fef3e2;
   }
-  .navbar .dropdown-menu {
-    width: 100%;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-/* Shrink effect */
-.navbar {
-  transition: all 0.3s ease;
-}
 
-.navbar.shrink {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.navbar.shrink .navbar-brand img {
-  width: 38px;
-  height: 38px;
-  transition: all 0.3s ease;
-}
-
-.navbar.shrink .nav-link {
-  font-size: 0.95rem;
-}
-
-/* start */
-/* Navbar Styles */
-    .navbar {
-      background-color: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 0.75rem 0;
-      transition: all 0.3s ease;
-    }
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-dark) !important;
-    }
-
-    .navbar-brand img {
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .navbar-brand:hover img {
-      transform: scale(1.05);
-    }
-
-    .nav-link {
-      color: #333 !important;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-link:hover {
-      color: #f37810 !important;
-    }
-
-    .dropdown-menu {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border: none;
-    }
-
-    .dropdown-item:hover {
-      background-color: #f37810;
-      color: #fff;
-    }
-
-    .text-muted {
-      font-weight: 300;
-    }
-
-    /* Shrink effect */
-    .navbar.shrink {
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .navbar.shrink .navbar-brand img {
-      width: 38px !important;
-      height: 38px !important;
-    }
-
-    .navbar.shrink .nav-link {
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 991px) {
-      .text-muted {
-        display: none;
-      }
-      .navbar .dropdown-menu {
-        width: 100%;
-      }
-    }
-
-    /* Mobile Call Bar */
-    .mobile-call-bar {
-      background-color: var(--white);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .mobile-call {
-      color: var(--primary-orange);
-      font-weight: 600;
-    }
-    
-footer {
-  background: black;
-  color: white;
-  padding: 40px 0;
-}
-
-footer a {
-  color: #ffe5cc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.coverage-section {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--text-dark);
-  margin: 0 -15px;
-  padding: 3rem 2rem;
-  border-top: 3px solid rgba(255, 255, 255, 0.3);
-}
-
-.coverage-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--text-dark);
-}
-
-.coverage-description {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.top-rated-badge {
-  background: white;
-  color: var(--primary-orange);
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 2px solid rgba(208, 123, 57, 0.2);
-  font-weight: 600;
-}
-
-.footer-link {
-  color: var(--text-muted);
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: var(--text-light) !important;
-  transform: translateX(5px);
-  text-decoration: underline !important;
-}
-
-.coverage-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(204, 105, 24, 0.1);
-  transition: all 0.3s ease;
-  display: block;
-  font-weight: 500;
-}
-
-.coverage-link:hover {
-  color: var(--primary-orange);
-  padding-left: 0.75rem;
-  border-bottom-color: var(--text-primary);
-  background: rgba(195, 191, 188, 0.05);
-}
-
-.coverage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-.google-reviews-carousel {
-  background-color: #fff;
-  padding: 4rem 0;
-  font-family: "Poppins", sans-serif;
-}
-
-.reviews-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  text-align: center;
-  gap: 1rem;
-}
-
-.google-logo {
-  width: 100px;
-}
-
-.review-summary h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #111;
-}
-
-.review-summary .stars {
-  color: #fbbc04;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-}
-
-.review-summary p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.review-summary a {
-  color: #f37810;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.review-summary a:hover {
-  text-decoration: underline;
-}
-
-/* --- Carousel Styles --- */
-.carousel-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 1.5rem;
-  scroll-snap-align: start;
-  padding: 0 1rem;
-}
-
-.review-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: start;
-  min-height: 220px;
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-.review-stars {
-  color: #fbbc04;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.review-card h4 {
-  color: #111;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.review-card p {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-.reviewer {
-  display: block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* --- Responsive --- */
-@media (max-width: 991px) {
-  .review-card {
-    flex: 0 0 calc(50% - 1rem);
+  .text-orange {
+    color: var(--primary-orange) !important;
   }
-}
 
-@media (max-width: 600px) {
-  .review-card {
-    flex: 0 0 100%;
+  html {
+    font-size: 90%;
   }
-}
-.cta-section {
-     /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
-     background-color: var(--primary-teal);
-     /* border-radius: 20px; */
-     padding: 2rem 1.5rem;
-     margin: 2rem 0;
-     position: relative;
-     overflow: hidden;
-     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
- }
 
- .cta-section::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background:
-         radial-gradient(circle at 20% 80%, rgba(19, 136, 125, 0.1) 0%, transparent 50%),
-         radial-gradient(circle at 80% 20%, rgba(19, 136, 125, 0.08) 0%, transparent 50%),
-         radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
- }
+  /* On small screens reduce ALL font sizes by 10% */
+  @media (max-width: 768px) {
+    html {
+      font-size: 70%;
+      /* ↓ global reduction */
+    }
+  }
 
- .cta-content {
-     position: relative;
-     z-index: 1;
-     padding: 1rem 3rem;
- }
+  .cta-section {
+    /* background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); */
+    background-color: var(--primary-teal);
+    /* border-radius: 20px; */
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
 
- .cta-title {
-     font-size: 1.3rem;
-     font-weight: 700;
-     color: #ffffff;
-     margin-bottom: 1rem;
-     line-height: 1.2;
-     text-align: left;
- }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(19, 136, 125, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(19, 136, 125, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  }
 
- .cta-text {
-     font-size: 0.9rem;
-     color: rgba(255, 255, 255, 0.85);
-     margin-bottom: 0;
-     line-height: 1.5;
- }
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem 3rem;
+  }
 
- .cta-buttons {
-     display: flex;
-     gap: 1rem;
-     align-items: center;
-     justify-content: space-around;
-     height: 100%;
- }
+  .cta-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: left;
+  }
 
- 
+  .cta-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
 
- /* Responsive Design */
- @media (max-width: 768px) {
-     .cta-section {
-         padding: 2rem 1.5rem;
-         text-align: center;
-     }
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
 
-     .cta-title {
-         font-size: 1rem;
-         text-align: center;
-     }
 
-     .cta-text {
-         text-align: center;
-         margin-bottom: 2rem;
-     }
 
-     .cta-buttons {
-         flex-direction: column;
-         align-items: center;
-         width: 100%;
-     }
-
- }
-
- @media (max-width: 576px) {
-     .cta-section {
-         padding: 1.5rem 1rem;
-         margin: 2rem 0;
-     }
-
-     .cta-title {
-         font-size: 0.95rem;
-     }
-
-     .cta-text {
-         font-size: 0.7rem;
-     }
-
-     .cta-buttons {
-         gap: 0.75rem;
-     }
- }
-
- /* Additional Enhancement: Pulse Effect */
- @keyframes pulse {
-     0% {
-         box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     }
-
-     50% {
-         box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
-     }
-
-     100% {
-         box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     }
- }
-
- .cta-button-orange:focus {
-     animation: pulse 2s infinite;
-     outline: none;
- }
- .cta-section-button-orange {
-     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-     color: #ffffff;
-     border: none;
-     padding: 0.7rem 1rem;
-     border-radius: 12px;
-     font-weight: 800;
-     font-size: 1rem;
-     text-decoration: none;
-     transition: all 0.3s ease;
-     box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-     position: relative;
-     overflow: hidden;
-     min-width: 200px;
-     text-align: center;
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
-     white-space: nowrap;
- }
- .cta-section-button-orange:hover{
-    background-color: white;
-    color:var(--text-dark)
- } /* Hero Section */
-    .hero {
-      background: linear-gradient(
-                135deg, 
-                rgba(236, 229, 229, 0.55) 0%, 
-                rgba(248, 245, 245, 0.55) 100%
-              ),
-              url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920') center/cover;
-  padding: 2rem 0;
-  position: relative;
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 2rem 1.5rem;
+      text-align: center;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
+    .cta-title {
+      font-size: 1rem;
+      text-align: center;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--text-dark);
+    .cta-text {
+      text-align: center;
       margin-bottom: 2rem;
     }
 
-    .hero-btn {
-      background: var(--primary-orange);
-      color: white;
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      border: none;
-      font-size: 1.1rem;
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
-    .hero-btn:hover {
-      background: #e55a28;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(255,107,53,0.4);
-      color: white;
+  }
+
+  @media (max-width: 576px) {
+    .cta-section {
+      padding: 1.5rem 1rem;
+      margin: 2rem 0;
     }
-    /* Contact Card */
+
+    .cta-title {
+      font-size: 0.95rem;
+    }
+
+    .cta-text {
+      font-size: 0.7rem;
+    }
+
+    .cta-buttons {
+      gap: 0.75rem;
+    }
+  }
+
+  /* Additional Enhancement: Pulse Effect */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+    }
+
+    100% {
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    }
+  }
+
+  .cta-button-orange:focus {
+    animation: pulse 2s infinite;
+    outline: none;
+  }
+
+  .cta-section-button-orange {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .cta-section-button-orange:hover {
+    background-color: white;
+    color: var(--text-dark)
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg,
+        rgba(236, 229, 229, 0.55) 0%,
+        rgba(248, 245, 245, 0.55) 100%),
+      url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920') center/cover;
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn {
+    background: var(--primary-orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1.1rem;
+  }
+
+  .hero-btn:hover {
+    background: #e55a28;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    color: white;
+  }
+
+  /* Contact Card */
+  .contact-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .form-control {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+  }
+
+  .submit-btn {
+    background: var(--primary-teal);
+    color: white;
+    padding: 0.9rem;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background: #0d9488;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+  }
+
+  /* Contact Form Section */
+  .contact-section {
+    background: var(--bg-light);
+    padding: 5rem 0;
+  }
+
+  .contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .contact-section .subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .form-section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dropdown .btn {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  .dropdown .btn:hover {
+    border-color: var(--primary-teal);
+  }
+
+  .form-success,
+  .form-error {
+    display: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+
+  .form-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+  }
+
+  .form-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+  }
+
+  /* Call Button */
+  .call-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-pink);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .call-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(236, 72, 153, 0.6);
+  }
+
+  .google-review {
+    background-color: var(--primary-teal);
+    padding: 30px;
+    color: white
+  }
+
+  .google-logo {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .overall-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .rating-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-dark);
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .star {
+    color: #fbbf24;
+    font-size: 24px;
+  }
+
+  .star.empty {
+    color: rgba(251, 191, 36, 0.3);
+  }
+
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero {
+      padding: 3rem 0;
+    }
+
     .contact-card {
-      background: white;
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      margin-top: 2rem;
     }
 
     .contact-card h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
+      text-align: center;
     }
 
-    .form-control {
-      border: 2px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .form-control:focus {
-      border-color: var(--primary-teal);
-      box-shadow: 0 0 0 3px rgba(20,184,166,0.1);
-    }
-
-    .submit-btn {
-      background: var(--primary-teal);
-      color: white;
-      padding: 0.9rem;
-      border-radius: 10px;
-      font-weight: 600;
-      border: none;
-      width: 100%;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #0d9488;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(20,184,166,0.3);
-    }
-    /* Contact Form Section */
-    .contact-section {
-      background: var(--bg-light);
-      padding: 5rem 0;
-    }
-
-    .contact-section h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 1rem;
-    }
-
-    .contact-section .subtitle {
-      color: var(--text-light);
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
-    }
-
-    .form-section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .dropdown .btn {
-      border: 2px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      text-align: left;
-    }
-
-    .dropdown .btn:hover {
-      border-color: var(--primary-teal);
-    }
-
-    .form-success, .form-error {
+    .benefit-separator {
       display: none;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 1rem;
     }
 
-    .form-success {
-      background: #d1fae5;
-      color: #065f46;
-      border: 1px solid #10b981;
+    .location-list.two-column {
+      grid-template-columns: repeat(2, 1fr) !important;
     }
+  }
 
-    .form-error {
-      background: #fee2e2;
-      color: #991b1b;
-      border: 1px solid #ef4444;
-    }
-     /* Call Button */
-    .call-button {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--primary-pink);
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(236,72,153,0.4);
-      z-index: 1000;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+  /* --- Section Layout --- */
+  .tenant-eviction-section {
+    background-color: #fff;
+  }
 
-    .call-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 30px rgba(236,72,153,0.6);
-    }
-    .google-review{
-      background-color: var(--primary-teal);
-      padding:30px;
-      color:white
-    }
-    .google-logo {
-     display: flex;
-     align-items: center;
-     /* justify-content: center; */
-     gap: 12px;
-     margin-bottom: 16px;
- }
- .overall-rating {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 12px;
-     margin-bottom: 8px;
- }
-
- .rating-number {
-     font-size: 36px;
-     font-weight: 800;
-     color: var(--text-dark);
- }
-
- .stars {
-     display: flex;
-     gap: 2px;
- }
-
- .star {
-     color: #fbbf24;
-     font-size: 24px;
- }
-
- .star.empty {
-     color: rgba(251, 191, 36, 0.3);
- }
-
-
-@media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero {
-        padding: 3rem 0;
-      }
-      .contact-card {
-        margin-top: 2rem;
-      }
-
-      .benefit-separator {
-        display: none;
-      }
-      .location-list.two-column{
-         grid-template-columns: repeat(2, 1fr) !important;
-      }
-    }
-
-    /* --- Section Layout --- */
-.tenant-eviction-section {
-  background-color: #fff;
-}
-
-.eviction-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.eviction-left, .eviction-right{
- display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: space-between; /* push first to top, second to bottom */
-  height: 100%;
-
-}
-
-.eviction-left,
-.eviction-right {
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-
-/* --- Left Content --- */
-.eviction-left h2 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-.eviction-left p {
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-/* --- Right Card --- */
-.content-nav-card {
-  background-color: #e5e7eb;
-  border-radius: 10px;
-  padding: 2.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.content-nav-card h4 {
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 1.2rem;
-}
-
-.content-nav-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.content-nav-card ul li {
-  margin-bottom: 12px;
-}
-
-.content-nav-card ul li a {
-  color: #111;
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  transition: color 0.2s ease;
-  line-height: 1.4;
-}
-
-.content-nav-card ul li a:hover {
-  color: #f37810;
-}
-
-.content-nav-card i {
-  font-size: 0.5rem;
-  color: #00bcd4;
-  margin-top: 6px;
-}
-
-/* --- Responsive --- */
-@media (max-width: 991px) {
   .eviction-wrapper {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .eviction-left,
   .eviction-right {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically */
+    justify-content: space-between;
+    /* push first to top, second to bottom */
+    height: 100%;
+
   }
 
+  .eviction-left,
+  .eviction-right {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  /* --- Left Content --- */
+  .eviction-left h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .eviction-left p {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  /* --- Right Card --- */
   .content-nav-card {
-    margin-top: 1rem;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
-}
 
-/* --- Process Section --- */
-.eviction-process {
-  background: #fff;
-}
-
-.process-card {
-  background: #e5e7eb;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-}
-
-.process-card:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transform: translateY(-3px);
-}
-
-.process-step .step-number {
-  background: #00a86b; /* your theme green */
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  margin-right: 15px;
-  flex-shrink: 0;
-}
-
-.arrow-img {
-  width: 40px;
-  height: 40px;
-  filter: hue-rotate(100deg) brightness(1.1);
-  border-radius: 50%;
-}
-
-.arrow-icon {
-  padding: 0;
-  
-}
-
-@media (max-width: 767px) {
-  .arrow-icon {
-    display: none;
+  .content-nav-card h4 {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.2rem;
   }
-  .process-card {
+
+  .content-nav-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content-nav-card ul li {
     margin-bottom: 20px;
   }
-}
 
-/* why choose us section */
-.why-choose-us {
-  background-color: #e5e7eb;
-}
-
-.why-choose-us h2 {
-  color: #0b0c10;
-}
-
-.why-choose-us .text-muted {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.why-list li {
-  font-size: 1.05rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #222;
-}
-
-.why-list i {
-  color: #00a86b; /* Your brand green */
-  font-size: 1.3rem;
-}
-
-.video-wrapper video {
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-@media (max-width: 991px) {
-  .why-choose-us .content {
-    text-align: center;
+  .content-nav-card ul li a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: color 0.2s ease;
+    line-height: 1.4;
   }
-  .why-list {
-    justify-content: center;
+
+  .content-nav-card ul li a:hover {
+    color: #f37810;
   }
-}
-/* --- Popular Services --- */
-.popular-services .service-card {
-  position: relative;
-  background-color: #2e7d6a; /* green */
-  color: #fff;
-  border-radius: 20px;
-  padding: 3rem 1.5rem;
-  text-align: left;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.popular-services .service-card:hover {
-  background-color: #7a1f63; /* purple */
-}
+  .content-nav-card i {
+    font-size: 0.5rem;
+    color: var(--primary-teal);
+    margin-top: 6px;
+  }
 
-/* Headings */
-.popular-services .service-card h5 {
-  font-weight: 700;
-  font-size: 1.25rem;
-  z-index: 2;
-  position: relative;
-}
-
-/* Button */
-.popular-services .btn-read {
-  display: inline-block;
-  background-color: #e50036;
-  color: #fff;
-  font-weight: 600;
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
-  text-decoration: none;
-  z-index: 2;
-  position: relative;
-}
-
-.popular-services .btn-read:hover {
-  background-color: #c4002e;
-}
-
-/* Oval image overlay */
-.popular-services .service-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 70%;
-  height: 70%;
-  background-image: var(--card-img);
-  background-size: cover;
-  background-position: center;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  transform: translate(20%, 20%) scale(1.1);
-  z-index: 1;
-}
-
-/* Section title highlight */
-.popular-services .highlight {
-  color: #e50036;
-}
-.service-card-new {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      height: 300px;
-      background: linear-gradient(135deg, #2c7873 0%, #1a4d49 100%);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card-new:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-
-    .card-image {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 60%;
-      height: 80%;
-      object-fit: cover;
-      border-top-left-radius: 250px;
-      border-bottom-left-radius:250px;
-      /* border-bottom-right-radius: 250px;
-      border-top-right-radius: 250px; */
-      opacity: 0.9;
-    }
-
-    .card-content {
-      position: relative;
-      z-index: 2;
-      padding: 40px;
-      height: 100%;
-      display: flex;
+  /* --- Responsive --- */
+  @media (max-width: 991px) {
+    .eviction-wrapper {
       flex-direction: column;
-      justify-content: space-between;
     }
 
-    .card-title {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 70%;
-      margin: 0;
+    .eviction-left,
+    .eviction-right {
+      max-width: 100%;
     }
 
-    .read-more-btn {
-      background: #dc143c;
-      color: white;
-      border: none;
-      padding: 16px 40px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      width: fit-content;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-      text-decoration: none;
+    .content-nav-card {
+      margin-top: 1rem;
+    }
+  }
+
+  /* --- Process Section --- */
+  .eviction-process {
+    background: #fff;
+  }
+
+  .process-card {
+    /* background: #e5e7eb; */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .process-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .process-step .step-number {
+    background: #00a86b;
+    /* your theme green */
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  .arrow-img {
+    width: 40px;
+    height: 40px;
+    /* filter: hue-rotate(100deg) brightness(1.1); */
+    border-radius: 50%;
+  }
+
+  .arrow-icon {
+    padding: 0;
+    display: none
+  }
+
+  @media (max-width: 767px) {
+    .arrow-icon {
+      display: none;
     }
 
-    .read-more-btn:hover {
-      background: #b91230;
-      transform: scale(1.05);
+    .process-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* why choose us section */
+  .why-choose-us {
+    /* background-color: #e5e7eb; */
+  }
+
+  .why-choose-us h2 {
+    color: #0b0c10;
+  }
+
+  .why-choose-us .text-muted {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .why-list li {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222;
+  }
+
+  .why-list i {
+    color: #00a86b;
+    /* Your brand green */
+    font-size: 1.3rem;
+  }
+
+  .video-wrapper video {
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 991px) {
+    .why-choose-us .content {
+      text-align: center;
     }
 
-    /* Alternative color scheme - magenta */
-    .service-card-new.magenta {
-      background: linear-gradient(135deg, #b8157a 0%, #8b1061 100%);
+    .why-list {
+      justify-content: center;
     }
+  }
 
-    /* Alternative color scheme - teal */
-    .service-card-new.teal {
-      background: linear-gradient(135deg, #3d8b85 0%, #2d6862 100%);
-    }
+  /* --- Popular Services --- */
+  .popular-services .service-card {
+    position: relative;
+    background-color: #2e7d6a;
+    /* green */
+    color: #fff;
+    border-radius: 20px;
+    padding: 3rem 1.5rem;
+    text-align: left;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .popular-services .service-card:hover {
+    background-color: #7a1f63;
+    /* purple */
+  }
+
+  /* Headings */
+  .popular-services .service-card h5 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Button */
+  .popular-services .btn-read {
+    display: inline-block;
+    background-color: #e50036;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 2;
+    position: relative;
+  }
+
+  .popular-services .btn-read:hover {
+    background-color: #c4002e;
+  }
+
+  /* Oval image overlay */
+  .popular-services .service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    background-image: var(--card-img);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: translate(20%, 20%) scale(1.1);
+    z-index: 1;
+  }
+
+  /* Section title highlight */
+  .popular-services .highlight {
+    color: #e50036;
+  }
+
+  .service-card-new {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 300px;
+    background: linear-gradient(135deg, #2c7873 0%, #1a4d49 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
+    border-top-left-radius: 250px;
+    border-bottom-left-radius: 250px;
+    /* border-bottom-right-radius: 250px;
+      border-top-right-radius: 250px; */
+    opacity: 0.9;
+  }
+
+  .card-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 70%;
+    margin: 0;
+  }
+
+  .read-more-btn {
+    background: #dc143c;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: fit-content;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+
+  .read-more-btn:hover {
+    background: #b91230;
+    transform: scale(1.05);
+  }
+
+  /* Alternative color scheme - magenta */
+  .service-card-new.magenta {
+    background: linear-gradient(135deg, #b8157a 0%, #8b1061 100%);
+  }
+
+  /* Alternative color scheme - teal */
+  .service-card-new.teal {
+    background: linear-gradient(135deg, #3d8b85 0%, #2d6862 100%);
+  }
 
 
 
-/*court finder */
-/* General Section Styling */
-.our-location {
-  background-color: #e5e7eb;
-}
+  /*court finder */
+  /* General Section Styling */
+  .our-location {
+    /* background-color: #e5e7eb; */
+  }
 
-.our-location h1 {
-  color: #0b0c10;
-}
+  .our-location h1 {
+    color: #0b0c10;
+  }
 
-.our-location p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
+  .our-location p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-/* Left Side Location List */
-.location-list {
-  overflow: hidden;
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  gap:20px;
-}
-.location-list.two-column {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px 20px;
-  padding: 10px 0;
-}
+  /* Left Side Location List */
+  .location-list {
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-.location-item {
+  .location-list.two-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 20px;
+    padding: 10px 0;
+  }
+
+  .location-item {
     border: 1px solid #00a86b;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  font-weight: 500;
-  color: #333;
-  transition: all 0.3s ease;
-}
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+  }
 
-.location-item:hover {
-  background-color: #00a86b;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
+  .location-item:hover {
+    background-color: #00a86b;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
 
 
-.location-item:hover {
-  background-color: #00a86b;
-  color: #fff;
-  cursor: pointer;
-}
+  .location-item:hover {
+    background-color: #00a86b;
+    color: #fff;
+    cursor: pointer;
+  }
 
-/* Right Side Court Lookup */
-.lookup-block {
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  border: 1px solid #dcdcdc;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-}
+  /* Right Side Court Lookup */
+  .lookup-block {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  }
 
-.lookup-block h3 {
-  color: #0b0c10;
-  font-weight: 700;
-}
+  .lookup-block h3 {
+    color: #0b0c10;
+    font-weight: 700;
+  }
 
-.postcode-input {
-  border: 1px solid #00a86b;
-  border-radius: 6px;
-  padding: 0.6rem 1rem;
-}
+  .postcode-input {
+    border: 1px solid #00a86b;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+  }
 
-.cta-button-green {
-  background-color: #00a86b;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
+  .cta-button-green {
+    background-color: #00a86b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
 
-.cta-button-green:hover {
-  background-color: #008f5c;
-}
+  .cta-button-green:hover {
+    background-color: #008f5c;
+  }
 
-.result-card {
-  border-left: 4px solid #00a86b;
-}
+  .result-card {
+    border-left: 4px solid #00a86b;
+  }
 
-.loader {
-  font-weight: 500;
-  color: #00a86b;
-}
+  .loader {
+    font-weight: 500;
+    color: #00a86b;
+  }
 
-a {
-  color: #00a86b;
-}
+  a {
+    color: #00a86b;
+  }
 
-/* a:hover {
+  /* a:hover {
   color: #008f5c;
 } */
 
 
-/* contact form */
-.modern-contact-form fieldset {
-  border: none;
-  padding: 0;
-}
-
-.contact-us-home-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.input-row-full-name {
-  display: flex;
-  align-items: end;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.select-wrapper select,
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-.form-group label {
-  font-weight: 500;
-  display: block;
-  margin-bottom: 6px;
-  color: white;
-}
-
-.select-wrapper select:focus,
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--theme-primary, #ff6b00);
-  box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.2);
-  outline: none;
-}
-
-.form-check {
-  font-size: 13px;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.form-check input {
-  margin-top: 4px;
-}
-
-.form-check label a {
-  color: var(--theme-primary, #ff6b00);
-  text-decoration: underline;
-}
-
-.cta-button-orange {
-  background: var(--theme-primary, #ff6b00);
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  transition: 0.3s;
-}
-
-.cta-button-orange:hover {
-  background: #e85b00;
-}
-
-textarea {
-  resize: none;
-}
-
-@media (max-width: 768px) {
-  .input-row-full-name {
-    /* flex-direction: column; */
+  /* contact form */
+  .modern-contact-form fieldset {
+    border: none;
+    padding: 0;
   }
-}
 
-.section-alt{
-  background-color:#1a5370;
-  color: white;
-}
+  .contact-us-home-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
+  .contact-us-home-fields>* {
+    font-size: 14px;
+  }
 
-.section{
-  padding: 5rem 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fixed-cta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--accent-teal, #009688);
-  color: #fff;
-  z-index: 9999;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
+  .input-row-full-name {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-.fixed-cta .cta-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.5rem;
-}
+  .select-wrapper select,
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
 
-.cta-button-nav {
-  flex: 1;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.85rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-}
+  .form-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    color: white;
+  }
 
-.cta-button-nav .cta-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.25rem;
-  transition: all 0.3s ease;
-}
+  .select-wrapper select:focus,
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--theme-primary, #ff6b00);
+    box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.2);
+    outline: none;
+  }
 
-.cta-button-nav i {
-  font-size: 1.2rem;
-}
+  .form-check {
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 
-.cta-button-nav:hover .cta-icon:hover {
-  background: #fff;
-  color:black;
-  transform: scale(1.05);
-}
-.cta-icon:hover>a{
-  color:black! important;
-}
+  .form-check input {
+    margin-top: 4px;
+  }
 
-.cta-button-nav:hover span {
-  opacity: 0.9;
-}
+  .form-check label a {
+    color: var(--theme-primary, #ff6b00);
+    text-decoration: underline;
+  }
 
-/* Pulse effect for call icon */
-@keyframes phonePulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
+  .cta-button-orange {
+    background: var(--theme-primary, #ff6b00);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    transition: 0.3s;
+  }
 
-.phone-pulse i {
-  animation: phonePulse 1.5s infinite;
-}
+  .cta-button-orange:hover {
+    background: #e85b00;
+  }
 
+  textarea {
+    resize: none;
+  }
 
+  @media (max-width: 768px) {
+    .input-row-full-name {
+      /* flex-direction: column; */
+    }
+  }
 
+  .section-alt {
+    background-color: #1a5370;
+    color: white;
+  }
 
 
+  .section {
+    padding: 5rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-circle {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+  }
+
+  .bg-orange {
+    background-color: var(--primary-orange) !important;
+  }
+
+  .bg-light-orange {
+    background-color: var(--light-orange) !important;
+  }
+
+  .text-orange {
+    color: var(--primary-orange) !important;
+  }
+
+  #faq .accordion-button {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  #faq .accordion-button:not(.collapsed) {
+    background-color: #0d6efd;
+    /* Bootstrap primary or your theme color */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+  }
+
+  #faq .accordion-item {
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  #faq .accordion-body {
+    background: #e5e7eb;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  #faq .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .fixed-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--accent-teal, #009688);
+    color: #fff;
+    z-index: 9999;
+  }
+
+  .cta-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cta-item {
+    flex: 1;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-item i {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .cta-item span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  /* Dividers */
+  .cta-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+  }
+
+  footer {
+    background: black;
+    color: white;
+    padding: 40px 0;
+  }
+
+  footer a {
+    color: #ffe5cc;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .coverage-section {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+    margin: 0 -15px;
+    padding: 3rem 2rem;
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .coverage-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+
+  .coverage-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+
+  .top-rated-badge {
+    background: white;
+    color: var(--primary-orange);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(208, 123, 57, 0.2);
+    font-weight: 600;
+  }
+
+  .footer-link {
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .footer-link:hover {
+    color: var(--text-light) !important;
+    transform: translateX(5px);
+    text-decoration: underline !important;
+  }
+
+  .coverage-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(204, 105, 24, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+    font-weight: 500;
+  }
+
+  .coverage-link:hover {
+    color: var(--primary-orange);
+    padding-left: 0.75rem;
+    border-bottom-color: var(--text-primary);
+    background: rgba(195, 191, 188, 0.05);
+  }
+
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .icoLogo {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .google-reviews-carousel {
+    background-color: #fff;
+    padding: 4rem 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .google-logo {
+    width: 100px;
+  }
+
+  .review-summary h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #111;
+  }
+
+  .review-summary .stars {
+    color: #fbbc04;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+
+  .review-summary p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .review-summary a {
+    color: #f37810;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .review-summary a:hover {
+    text-decoration: underline;
+  }
+
+  .user-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #1a73e8;
+    /* blue circle */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+
+  /* --- Carousel Styles --- */
+  .carousel-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    scroll-snap-align: start;
+    padding: 0 1rem;
+  }
+
+  .review-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    transition: 0.3s;
+  }
+
+  .review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 20px;
+  }
+
+  .review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .review-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111;
+  }
+
+  .verified {
+    color: #1a73e8;
+    font-size: 14px;
+  }
+
+  .review-date {
+    font-size: 13px;
+    color: #777;
+  }
+
+  .review-stars i {
+    color: #fbbc04;
+    margin-right: 2px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .review-readmore {
+    color: #1a73e8;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 991px) {
+    .review-card {
+      flex: 0 0 calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .review-card {
+      flex: 0 0 100%;
+    }
+  }
+
+  .nav-link .active {
+    background-color: var(--primary-teal);
+    color: white;
+  }
+
+  .call-btn {
+    background-color: var(--primary-orange);
+    color: var(--white) !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .call-btn:hover {
+    background-color: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
 
 
 
+  /* Benefit Banner - Teal Green */
+  .benefit-banner {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+    padding: 1rem 0;
+    color: var(--white);
+  }
 
-  </style>
-</head>
+  .benefit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefit-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .benefit-check {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .benefit-separator {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Mobile Slider */
+  .benefit-banner-mobile {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+    padding: 1rem 0;
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .mobile-slider-container {
+    position: relative;
+  }
+
+  .mobile-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+  }
+
+  .mobile-slide {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .indicator.active {
+    background-color: var(--white);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Compact header */
+  .navbar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .navbar-brand img {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-brand:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Nav links */
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #f37810;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f37810;
+    color: #fff;
+  }
+
+  /* Divider */
+  .text-muted {
+    font-weight: 300;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 991px) {
+    .text-muted {
+      display: none;
+    }
+
+    .navbar .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  /* Shrink effect */
+  .navbar {
+    transition: all 0.3s ease;
+  }
+
+  .navbar.shrink {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar.shrink .navbar-brand img {
+    width: 38px;
+    height: 38px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.shrink .nav-link {
+    font-size: 0.95rem;
+  }
+
+  /* start */
+  /* Navbar Styles */
+  .navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark) !important;
+  }
+
+  .navbar-brand img {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-brand:hover img {
+    transform: scale(1.05);
+  }
+
+  .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #f37810 !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f37810;
+    color: #fff;
+  }
+
+  .text-muted {
+    font-weight: 300;
+  }
+
+  /* Shrink effect */
+  .navbar.shrink {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar.shrink .navbar-brand img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .navbar.shrink .nav-link {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 991px) {
+    .text-muted {
+      display: none;
+    }
+
+    .navbar .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  /* Mobile Call Bar */
+  .mobile-call-bar {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .mobile-call {
+    color: var(--primary-orange);
+    font-weight: 600;
+  }
+
+  /* Notice Types */
+        .notice-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 992px) {
+            .notice-comparison {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .notice-card {
+            background: white;
+            /* border-radius: 12px; */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+           
+        }
+
+        .notice-header {
+             /* border: 2px solid var(--primary-teal); */
+            color: black;
+            /* padding: 1.5rem; */
+            font-weight: 700;
+            font-size: 1.1rem;
+            /* text-align: center; */
+        }
+
+        .notice-header.section-173 {
+            /* background: var(--secondary-teal); */
+        }
+
+        .notice-header.section-182 {
+            /* background: var(--light-orange); */
+        }
+
+        .notice-content {
+            padding: 1.5rem;
+            /* background-color: var(--light-orange); */
+        }
+
+        .notice-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            /* padding: 0.75rem; */
+           
+            border-radius: 6px;
+        }
+
+        .notice-feature i {
+            color: var(--primary-orange);
+            margin-right: 0.75rem;
+            width: 1.25rem;
+        }
+
+</style>
 
 <body>
 
   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/Eviction_lawyers.png" alt="logo" width="45" height="45" class="me-2" />
-        <span class="fw-bold text-dark">Eviction Lawyers</span>
+        <img src="assets/E logo 1.png" alt="logo" width="150" height="70" />
       </a>
 
       <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a href="#contact" class="d-block d-md-none btn btn-sm"
+        style="background-color: #f37810; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
 
       <!-- Navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -1545,10 +1715,10 @@ textarea {
             <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="section8-21.html">Section 8/21</a>
+            <a class="nav-link" href="section8-21.html">Section 8/21 Notice</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="PriorityEviction.html"> Priority Eviction</a>
+            <a class="nav-link" href="EvictionProcess.html">Eviction Process</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ComplexCases.html">Complex Cases</a>
@@ -1569,9 +1739,9 @@ textarea {
               <i class="fas fa-bars ms-2"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
-              <li><a class="dropdown-item" href="services.html#section8">Section 8 Notice</a></li>
-              <li><a class="dropdown-item" href="services.html#section21">Section 21 Notice</a></li>
-              <li><a class="dropdown-item" href="guide.html">Eviction Guide</a></li>
+              <li><a class="dropdown-item" href="section8-21.html">Section 8 Notice</a></li>
+              <li><a class="dropdown-item" href="section8-21.html">Section 21 Notice</a></li>
+              <li><a class="dropdown-item" href="EvictionProcess.html">Eviction Guide</a></li>
               <li><a class="dropdown-item" href="ComplexCases.html">Complex Cases</a></li>
               <li><a class="dropdown-item" href="wales-guide.html">Wales Notice Guide</a></li>
               <li><a class="dropdown-item" href="arrears.html">Rent Arrears Guide</a></li>
@@ -1579,21 +1749,12 @@ textarea {
               <li><a class="dropdown-item" href="court.html">Court Procedures & Tenant Defence</a></li>
               <li><a class="dropdown-item" href="service.html">Complete Service Guide</a></li>
               <li><a class="dropdown-item" href="contested.html">Contested Cases Info</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Mobile Call Bar -->
-  <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
-    <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none"
-      style="border-bottom: 2px solid #f37810;">Call Us: 0333 050 5381</a>
-    <a href="#contact" class="btn btn-sm"
-      style="background-color: #f37810; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
-  </div>
 
   <!-- Benefit Banner -->
   <div class="container-fluid p-0">
@@ -1658,11 +1819,10 @@ textarea {
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1>England & Wales Eviction Specialist</h1>
+          <h1>Evicting a Tenant in Wales – Legal Help for Landlordss</h1>
           <p>
-            Facing issues with tenants or unpaid rent? Our experienced lawyers help landlords, housing
-            associations & estate agents reclaim property with expert eviction support, legal compliance,
-            and fast action—nationwide.
+            Expert legal support for landlords under the Renting Homes (Wales) Act 2016 - Section 173 & 182 notices,
+            court representation, and bailiff enforcement.
           </p>
 
           <div>
@@ -1682,20 +1842,27 @@ textarea {
             <div class="google-review-box d-inline-flex align-items-center mt-3 p-2 px-3">
               <img src="../assets/google.png" alt="Google Logo" class="me-2" width="40" height="40">
               <span class="rating-number">4.8</span>
-              <i class="fas fa-star star ms-1"></i>
-              <span class="ms-2 text-muted">Google Reviews</span>
+              <div class="me-2" style="font-size:1.2rem; color:#f7c948;">
+                <!-- 4.8 stars (visual) -->
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="ms-2 text-muted fw-semibold">Google Reviews</span>
             </div>
           </a>
 
-          <a href="#contactForm" class="hero-btn mt-3">
-            <i class="fas fa-rocket me-2"></i>Start Eviction Today
-          </a>
+          <div><a href="#contactForm" class="hero-btn mt-3">
+              Start Eviction Today
+            </a>
+          </div>
         </div>
 
 
         <div class="col-lg-6">
           <div class="contact-card p-4 bg-white shadow rounded">
-            <h3>Contact Us</h3>
+            <h2>Contact Us</h2>
+            <p class="mb-2">Contact us to see how we can help today</p>
             <form id="contactForm" method=' POST'>
               <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
               <div class="mb-2">
@@ -1715,7 +1882,7 @@ textarea {
                   name="reason"></textarea>
               </div>
               <button type="submit" class="btn w-100" id="heroSubmitBtn"
-                style="background-color:#f37810;color:white;"><i class="fas fa-paper-plane me-2"></i>Submit</button>
+                style="background-color:#f37810;color:white;">Submit</button>
             </form>
             <div class="form-success" id="heroFormSuccess">
               <strong>Success!</strong> Your message has been sent successfully.
@@ -1729,46 +1896,57 @@ textarea {
       </div>
     </div>
   </section>
+
   <section class="tenant-eviction-section py-5" id="tenant-eviction">
     <div class="container">
-      <h1 class="text-center mb-4">What Is Eviction in England & Wales?</h1>
       <div class="eviction-wrapper d-flex ">
 
         <!-- Left Column -->
         <div class="eviction-left">
-          <p>
-            Eviction is the formal legal process for regaining possession of a property when a tenancy ends or
-            obligations are not met. Landlords must comply with the Housing Act 1988, Housing Act 1996, and the Renters
-            (Reform) Bill 2025.
-          </p>
-          <p>
-            Serving the correct notices and following proper procedures is essential to remain compliant.
-          </p>
-          <p>Landlords should also maintain clear records of communication, payments, and any breaches of the tenancy
-            agreement, as this evidence can be crucial if possession proceedings reach court. Seeking professional
-            advice or assistance from a qualified letting agent or solicitor can help ensure the eviction process is
-            handled lawfully, fairly, and efficiently, minimizing potential disputes or delays.</p>
+          <h3 class="text-center mb-4">Eviction Process in Wales?</h3>
+          <p>If you're a landlord in Wales facing rent arrears, tenancy breaches or seeking possession, you must follow
+            the correct legal process under Welsh housing law. Eviction laws in Wales changed significantly under the
+            Renting Homes (Wales) Act 2016, which came fully into force on 1 December 2022.</p>
+
+          <div class="mt-2">
+            <h5 class="fw-bold mb-3">Key Welsh Law Differences:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Pre-Dec 2022
+                  tenancies:</strong> Use legacy Section 8/21 (Housing Act 1988) but <em>must convert</em> to occupation
+                contracts</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><strong>Post-Dec 2022
+                  tenancies:</strong> <strong>New Welsh notices only</strong> (Renting Homes Act 2016)</li>
+              <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i><strong>No Section 21
+                  "no-fault"</strong> evictions in Wales anymore</li>
+            </ul>
+          </div>
+
         </div>
+
 
         <!-- Right Column -->
         <div class="eviction-right">
-          <div class="content-nav-card">
-            <h4>Page content navigation</h4>
-            <ul>
-              <li><a href="#tenant-eviction"><i class="fas fa-square-full"></i>What Is Eviction in England & Wales?</a>
-              </li>
-              <li><a href="#our-process"><i class="fas fa-square-full"></i>Our eviction process</a></li>
-              <li><a href="#why-choose-us"><i class="fas fa-square-full"></i>Why Choose Us</a></li>
-              <li><a href="#popular-services"><i class="fas fa-square-full"></i>Popular Services</a></li>
-              <li><a href="#Locations-We-Serve"><i class="fas fa-square-full"></i>Location We Serve</a></li>
-              <li><a href="#faq"><i class="fas fa-square-full"></i>Frequently asked questions</a></li>
-            </ul>
+          <div class="content-nav">
+            <div class="content-nav-card">
+              <h4 class="mb-4">Page content navigation</h4>
+              <ul>
+                <li><a href="#tenant-eviction"><i class="fas fa-square-full"></i>What Is Eviction in England &
+                    Wales?</a>
+                </li>
+                <li><a href="#our-process"><i class="fas fa-square-full"></i>Our eviction process</a></li>
+                <li><a href="#why-choose-us"><i class="fas fa-square-full"></i>Why Choose Us</a></li>
+                <li><a href="#popular-services"><i class="fas fa-square-full"></i>Popular Services</a></li>
+                <li><a href="#Locations-We-Serve"><i class="fas fa-square-full"></i>Location We Serve</a></li>
+                <li><a href="#faq"><i class="fas fa-square-full"></i>Frequently asked questions</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
   <div class="google-review mt-4" id="google-reviews">
     <div class="container">
       <div class="row gx-4 align-items-start">
@@ -1780,7 +1958,7 @@ textarea {
             <div class="d-flex align-items-center mb-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/375px-Google_2015_logo.svg.png"
-                alt="Google" style="width:72px; height:auto;">
+                alt="Google" style="width:200px; height:auto;">
             </div>
 
             <h3 class="mb-2" style="font-weight:700; font-size:1.4rem; color:#111;">Excellent</h3>
@@ -1802,10 +1980,10 @@ textarea {
               Real, verified Google reviews from landlords and agents who used our eviction services.
             </p>
 
-            <a href="https://share.google/AfyHvaGR7h1sTtiTq" target="_blank" rel="noopener noreferrer" class="btn w-100"
+            <!-- <a href="https://share.google/AfyHvaGR7h1sTtiTq" target="_blank" rel="noopener noreferrer" class="btn w-100"
               style="background-color:#f37810; color:#fff; border-radius:6px;">
-              Read all reviews on Google
-            </a>
+              Read More
+            </a> -->
           </div>
         </div>
 
@@ -1820,6 +1998,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="L"></div>
+                          <h4>Ellite</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1830,7 +2012,7 @@ textarea {
                           Total Eviction helped me when I wanted to sell a property with a tenant who didn’t want to
                           leave.
                         </p>
-                        <div class="text-muted fw-semibold">— Estelle</div>
+
                       </div>
                     </div>
                   </div>
@@ -1838,6 +2020,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="S"></div>
+                          <h4>Suzanne</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1847,7 +2033,6 @@ textarea {
                         <p class="text-muted">
                           I was paid out for rent owed, and legal fees repaid — efficient and professional.
                         </p>
-                        <div class="text-muted fw-semibold">— Suzanne</div>
                       </div>
                     </div>
                   </div>
@@ -1855,6 +2040,10 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="H"></div>
+                          <h4>Harry</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1864,7 +2053,6 @@ textarea {
                         <p class="text-muted">
                           They handled my case from start to finish and kept me updated throughout.
                         </p>
-                        <div class="text-muted fw-semibold">— Harry</div>
                       </div>
                     </div>
                   </div>
@@ -1877,6 +2065,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="D"></div>
+                          <h4>David</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1886,7 +2078,6 @@ textarea {
                         <p class="text-muted">
                           They secured possession of my property quickly and professionally.
                         </p>
-                        <div class="text-muted fw-semibold">— David</div>
                       </div>
                     </div>
                   </div>
@@ -1894,6 +2085,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="L"></div>
+                          <h4>Linda</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1903,7 +2098,6 @@ textarea {
                         <p class="text-muted">
                           The team handled my Section 21 notice perfectly, guiding me step by step.
                         </p>
-                        <div class="text-muted fw-semibold">— Lisa</div>
                       </div>
                     </div>
                   </div>
@@ -1911,6 +2105,10 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="R"></div>
+                          <h4>Robyn</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1920,7 +2118,6 @@ textarea {
                         <p class="text-muted">
                           Lovely and supportive staff who help through each step — highly recommended.
                         </p>
-                        <div class="text-muted fw-semibold">— Robyn</div>
                       </div>
                     </div>
                   </div>
@@ -1933,6 +2130,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="C"></div>
+                          <h4>Casey</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1942,7 +2143,6 @@ textarea {
                         <p class="text-muted">
                           Supportive and knowledgeable — resolved everything efficiently.
                         </p>
-                        <div class="text-muted fw-semibold">— Casey</div>
                       </div>
                     </div>
                   </div>
@@ -1950,6 +2150,10 @@ textarea {
                   <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="P"></div>
+                          <h4>Prabhakara</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1959,7 +2163,6 @@ textarea {
                         <p class="text-muted">
                           Impressed with their speed and service — would recommend to landlords.
                         </p>
-                        <div class="text-muted fw-semibold">— Prabhakara</div>
                       </div>
                     </div>
                   </div>
@@ -1967,6 +2170,10 @@ textarea {
                   <div class="col-12 col-lg-4 d-none d-lg-block">
                     <div class="card h-100 shadow-sm">
                       <div class="card-body">
+                        <div class="d-flex gap-3">
+                          <div class="user-avatar" data-name="L"></div>
+                          <h4>LW</h4>
+                        </div>
                         <div class="mb-2 text-warning">
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
                           <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -1976,7 +2183,6 @@ textarea {
                         <p class="text-muted">
                           The solicitors were communicative and got great results.
                         </p>
-                        <div class="text-muted fw-semibold">— LW</div>
                       </div>
                     </div>
                   </div>
@@ -2002,15 +2208,67 @@ textarea {
     </div>
   </div>
 
+  <!-- Welsh Eviction Notice Types -->
+    <section class="tenant-eviction-section py-5" id="tenant-eviction">
+    <div class="container">
+       <h2 class="text-center mb-3">Eviction Notice Types in Wales</h2>
+      <div class="eviction-wrapper d-flex ">
+
+        <!-- Left Column -->
+        <div class="eviction-left p-3">
+          <h3 class="text-center mb-4">Section 173 (No-Fault Notice to End Contract)</h3>
+          <p>
+           Section 173 is Wales' replacement for Section 21 and allows landlords to end a periodic occupation contract without needing to prove fault. However, the notice periods are significantly longer than English law. You must wait 6 months from the start of the tenancy to serve the notice, then the tenant has 6 months to vacate. This effectively means no eviction without fault within the first 12 months of a tenancy in Wales
+          </p>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-success fw-bold mb-3">
+                <i class="fas fa-check-circle me-2"></i>Requirements:
+              </h5>
+              <ul>
+                <li>Cannot serve within first 6 months of occupation contract</li>
+                <li>Minimum 6 months notice to contract-holder</li>
+                <li>Must comply with deposit protection and EPC requirements</li>
+                <li>Model written statement must be provided</li>
+                <li>Periodic contracts only - cannot end fixed-term contracts early</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="eviction-right p-3">
+          <h3 class="text-center mb-4">Section 182 For Contract Breaches (Equivalent to Section 8)</h3>
+          <p>
+            In Wales, there are no specific numbered "grounds" like English Section 8. Instead, the landlord must provide evidence of the breach and follow the correct notice period. Section 182 covers all contract breaches including rent arrears, antisocial behaviour, property damage, or failure to care for the property. The notice period varies depending on the severity of the breach.
+          </p>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-success fw-bold mb-3">
+                <i class="fas fa-check-circle me-2"></i>Requirements:
+              </h5>
+              <ul>
+                <li>14 days notice for serious rent arrears</li>
+                <li>Immediate notice (0 days) for antisocial behaviour or criminal damage</li>
+                <li>30 days notice for other contract breaches</li>
+                <li>Written explanation of breach must be provided</li>
+                <li>Compliance required with deposit protection, EPC, and model statement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
   <section class="eviction-process py-5" id="our-process">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">Step-by-Step Eviction Process</h2>
         <p class="text-muted">
-          When a tenant fails to vacate the property after being served with a valid notice, the landlord must take the
-          next step by applying to the court for possession. This formal process ensures you recover your property
-          lawfully and in line with the Housing Act. The court will guide the matter through a series of stages,
-          typically taking 6–12 weeks.
+         The Welsh eviction process follows five clear steps under the Renting Homes (Wales) Act 2016. Each step has specific legal requirements and timescales that must be followed precisely to avoid delays or case dismissal. Our Welsh legal team ensures full compliance at every stage.
         </p>
       </div>
 
@@ -2020,8 +2278,8 @@ textarea {
           <div class="process-step d-flex align-items-start">
             <div class="step-number">1</div>
             <div>
-              <h5>Serve Notice</h5>
-              <p>Serve Section 21 or Section 8 notice to tenant with proper legal requirements met.</p>
+              <h5>Issue Correct Notice</h5>
+              <p>Use Section 173 (no-fault) or Section 182 (breach-based) depending on the contract type and situation. Ensure all compliance requirements are met.</p>
             </div>
           </div>
         </div>
@@ -2035,8 +2293,8 @@ textarea {
           <div class="process-step d-flex align-items-start">
             <div class="step-number">2</div>
             <div>
-              <h5>Wait for Expiry</h5>
-              <p>2 weeks–2 months waiting period, depending on grounds and notice type served.</p>
+              <h5>Wait Out Notice Period</h5>
+              <p>Minimum of 6 months (no-fault) or 14–30 days (breach-based). Contract-holder has this time to vacate or remedy the breach.</p>
             </div>
           </div>
         </div>
@@ -2046,8 +2304,8 @@ textarea {
           <div class="process-step d-flex align-items-start">
             <div class="step-number">3</div>
             <div>
-              <h5>Issue Possession Claim</h5>
-              <p>Accelerated or standard claim process filed with the appropriate court.</p>
+              <h5>Court Application</h5>
+              <p>If the tenant refuses to leave, apply to the County Court for a possession order under Welsh procedures.</p>
             </div>
           </div>
         </div>
@@ -2061,8 +2319,8 @@ textarea {
           <div class="process-step d-flex align-items-start">
             <div class="step-number">4</div>
             <div>
-              <h5>Court Review/Hearing</h5>
-              <p>Paper review for accelerated claims or oral hearing for standard claims.</p>
+              <h5>Possession Order Granted</h5>
+              <p>If unopposed and valid, the court grants possession. May be accelerated if no hearing needed.</p>
             </div>
           </div>
         </div>
@@ -2072,8 +2330,8 @@ textarea {
           <div class="process-step d-flex align-items-start">
             <div class="step-number">5</div>
             <div>
-              <h5>Possession Order</h5>
-              <p>Court typically grants possession order within 14–28 days of hearing.</p>
+              <h5>Bailiff Enforcement</h5>
+              <p>Apply for a warrant for bailiffs to remove the tenant if they still remain after the possession order.</p>
             </div>
           </div>
         </div>
@@ -2194,7 +2452,7 @@ textarea {
             <img src="assets/law-firm-8306442_1280.jpg" alt="Service" class="card-image">
             <div class="card-content">
               <h3 class="card-title">Rent Recovery & Advice</h3>
-             <a href="arrears.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <a href="arrears.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2207,8 +2465,9 @@ textarea {
               src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
               alt="Service" class="card-image">
             <div class="card-content">
-              <h3 class="card-title">Priority Super Package (Contested Case Coverage)</h3>
-              <a href="PriorityEviction.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <h3 class="card-title">Eviction Process</h3>
+              <a href="EvictionProcess.html" class="read-more-btn" role="button"
+                aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2219,7 +2478,7 @@ textarea {
           <div class="service-card-new">
             <img src="assets/contract.png" alt="Service" class="card-image">
             <div class="card-content">
-              <h3 class="card-title">Guaranteed Eviction (Uncontested)</h3>
+              <h3 class="card-title">Wales Eviction Guide</h3>
               <a href="contested.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
@@ -2232,7 +2491,7 @@ textarea {
             <img src="assets/about.jpg" alt="Service" class="card-image">
             <div class="card-content">
               <h3 class="card-title">Eviction Advice & Notice</h3>
-             <a href="guide.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <a href="guide.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2244,7 +2503,7 @@ textarea {
   <section class="our-location py-5" id="Locations-We-Serve">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="fw-bold">Our Location</h1>
+        <h1 class="fw-bold">Some Areas We Cover</h1>
         <p class="text-muted w-75 mx-auto">
           We provide eviction and housing legal services for landlords, tenants, and agents across England and Wales.
           Whether you're based in a major city or surrounding area, we can help.
@@ -2334,7 +2593,7 @@ textarea {
   <section class="section section-alt mt-4 mb-md-2 py-md-4">
     <div class="container">
       <h2 class="text-center">Start Your Eviction Today</h2>
-      <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">
+      <p class="text-center" style="font-size: 14px; margin-bottom: 1rem;">
         Complete our 30-second form and we'll call you back within 24 hours
       </p>
 
@@ -2406,7 +2665,7 @@ textarea {
                 <!-- Description -->
                 <div class="form-group">
                   <label for="message">Brief Description of Situation</label>
-                  <textarea id="message" name="message" rows="3"
+                  <textarea id="message" name="message" rows="2"
                     placeholder="Tell us about your situation..."></textarea>
                 </div>
 
@@ -2422,9 +2681,9 @@ textarea {
                 </div>
 
                 <!-- Submit -->
-                <div class="text-center mt-3">
+                <div class="text-center mt-1">
                   <button type="submit" id="mainSubmitBtn" class="mainSubmitBtn cta-button-orange">
-                    <i class="fas fa-paper-plane"></i> Start My Eviction Now
+                    Start My Eviction Now
                   </button>
                 </div>
 
@@ -2511,11 +2770,11 @@ textarea {
             <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
                   What are your fees and how do you charge?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              <div id="faq4" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                   We offer transparent, fixed-fee services with no hidden costs. Our
@@ -2528,11 +2787,11 @@ textarea {
             <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
                   Can you help if the tenant refuses to leave after notice?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              <div id="faq5" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                   Yes, we handle court proceedings and bailiff applications when
@@ -2545,11 +2804,11 @@ textarea {
             <div class="accordion-item border-0 mb-3 rounded-4 shadow-sm">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
                   Do I need a solicitor to evict a tenant?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              <div id="faq6" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                   While having a solicitor ensures all procedures are followed
@@ -2565,40 +2824,43 @@ textarea {
   </section>
   <!-- Fixed CTA (Mobile Only) -->
   <div class="fixed-cta d-lg-none" id="fixedCta">
-    <div class="container-fluid px-0">
-      <div class="cta-nav d-flex justify-content-around align-items-center">
+    <div class="cta-nav">
 
-        <a href="tel:+4403333050381" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <span>Call</span>
-        </a>
+      <!-- Phone -->
+      <a href="tel:+4403333050381" class="cta-item">
+        <i class="fas fa-phone"></i>
+        <span>Phone</span>
+      </a>
 
-        <a href="mailto:info@evictionhelp.co.uk" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <span>Email</span>
-        </a>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
 
-        <a href="#contactForm" class="cta-button-nav">
-          <div class="cta-icon">
-            <i class="fas fa-comment-dots"></i>
-          </div>
-          <span>Enquire</span>
-        </a>
+      <!-- Enquiry -->
+      <a href="mailto:info@evictionhelp.co.uk" class="cta-item">
+        <i class="fas fa-envelope"></i>
+        <span>Enquiry</span>
+      </a>
 
-      </div>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
+
+      <!-- Menu -->
+      <a href="#" class="cta-item" id="ctaMenuBtn">
+        <i class="fas fa-bars"></i>
+        <span>Menu</span>
+      </a>
+
     </div>
   </div>
+
+
   <footer class="mt-5">
     <div class="container">
       <div class="row">
         <!-- Left Side: Company Info -->
         <div class="col-md-6 text-center text-md-start">
           <div class="mb-3">
-            <img src="assets/Eviction_lawyers_logo.png" alt="logo" width="100" height="80" class="me-2" />
+            <img src="assets/E logo.png" alt="logo" width="100" height="50" class="me-2" />
             <span class="fw-bold text-white fs-4">Eviction Lawyers</span>
           </div>
 
@@ -2611,24 +2873,30 @@ textarea {
             panel solicitors, who are authorised and regulated by the Solicitors Regulation Authority (SRA).
           </p>
 
-          <div class="d-block d-md-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+          <div class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
             <!-- Start of SRA Digital Badge code -->
             <div class="yoshkidiv">
-              <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
+              <img alt="Verify SRA Membership" width="200" height="100" style="margin-bottom: 30px;"
+                src="./assets/SRA logo.png" />
             </div>
             <!-- End of SRA Digital Badge code -->
             <div class="icoLogo">
-              <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+              <img src="assets/icoLogo.png" alt="ICO Logo" width="200" height="150">
             </div>
           </div>
         </div>
 
         <!-- Right Side: Links Section -->
         <div class="col-md-6 text-center text-md-start ">
-          <div class="text-center mb-4">
-            <div class="top-rated-badge">
-              <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
-              <span>Top-Rated Legal Services</span>
+          <div class=" d-flex align-items-center  justify-content-center flex-column mb-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/375px-Google_2015_logo.svg.png"
+              alt="Google" style="width:70px; height:auto;">
+            <div class="me-2" style="font-size:1.2rem; color:#f7c948;">
+              <!-- 4.8 stars (visual) -->
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i> <span style="color: white;">4.8</span>
             </div>
           </div>
           <div class="row text-center text-md-start g-4">
@@ -2711,9 +2979,6 @@ textarea {
       <div class="coverage-section">
         <div class="text-center mb-4">
           <h3 class="coverage-title">Some Areas We Cover</h3>
-          <p class="coverage-description">
-            We provide assistance across England and Wales. Click your city below to find eviction lawyers near you:
-          </p>
         </div>
         <div class="coverage-grid">
           <div class="coverage-column">
@@ -2802,6 +3067,11 @@ textarea {
         navbar.classList.remove("shrink");
       }
     });
+    document.querySelectorAll(".user-avatar").forEach(el => {
+      const name = el.getAttribute("data-name");
+      el.textContent = name.charAt(0).toUpperCase();
+    });
+
   </script>
 
   <script>
@@ -3063,6 +3333,29 @@ textarea {
       });
     })();
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctaMenuBtn = document.getElementById("ctaMenuBtn");
+      const navbarCollapse = document.getElementById("navbarNavDropdown");
+
+      // Bootstrap collapse instance
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+
+      // Toggle on CTA Menu click
+      ctaMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (navbarCollapse.classList.contains("show")) {
+          bsCollapse.hide();
+        } else {
+          bsCollapse.show();
+        }
+      });
+    });
+  </script>
+
 
 </body>
 

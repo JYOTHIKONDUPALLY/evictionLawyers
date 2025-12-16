@@ -1514,13 +1514,17 @@ textarea {
 }
 
 
+html {
+    font-size: 90%;
+  }
 
-
-
-
-
-
-
+  /* On small screens reduce ALL font sizes by 10% */
+  @media (max-width: 768px) {
+    html {
+      font-size: 70%;
+      /* ↓ global reduction */
+    }
+  }
   </style>
 </head>
 
@@ -1531,14 +1535,12 @@ textarea {
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/Eviction_lawyers.png" alt="logo" width="45" height="45" class="me-2" />
-        <span class="fw-bold text-dark">Eviction Lawyers</span>
+        <img src="assets/E logo 1.png" alt="logo" width="150" height="70" />
       </a>
 
       <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a href="#contact" class="d-block d-md-none btn btn-sm"
+        style="background-color: #f37810; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
 
       <!-- Navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -1547,10 +1549,10 @@ textarea {
             <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="section8-21.html">Section 8/21</a>
+            <a class="nav-link" href="section8-21.html">Section 8/21 Notice</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="PriorityEviction.html"> Priority Eviction</a>
+            <a class="nav-link" href="EvictionProcess.html">Eviction Process</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ComplexCases.html">Complex Cases</a>
@@ -1589,13 +1591,6 @@ textarea {
     </div>
   </nav>
 
-  <!-- Mobile Call Bar -->
-  <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
-    <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none"
-      style="border-bottom: 2px solid #f37810;">Call Us: 0333 050 5381</a>
-    <a href="#contact" class="btn btn-sm"
-      style="background-color: #f37810; color: white; padding: 6px 12px; border-radius: 4px;">EVICT NOW</a>
-  </div>
 
   <!-- Benefit Banner -->
   <div class="container-fluid p-0">
@@ -1697,62 +1692,195 @@ textarea {
       </div>
     </div>
   </section>
- <section class="py-5 bg-white">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center contact-card border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <div class="icon-circle bg-orange text-white mx-auto mb-3">
+
+         <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                 <section class="section section-alt mt-4 mb-md-2 py-md-4">
+    <div class="container">
+      <h2 class="text-center">Start Your Eviction Today</h2>
+      <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">
+        Complete our 30-second form and we'll call you back within 24 hours
+      </p>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <!-- MAIN CONTACT FORM -->
+          <form id="mainContactForm" class="modern-contact-form">
+
+            <!-- Hidden required Web3Forms fields -->
+            <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
+            <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <fieldset>
+              <div class="contact-us-home-fields">
+
+                <!-- Title + Full Name -->
+                <label for="fullname">Full Name *</label>
+                <div class="input-row-full-name">
+                  <div class="select-wrapper">
+                    <select id="title" name="title" required>
+                      <option value="">Title</option>
+                      <option>Mr</option>
+                      <option>Mrs</option>
+                      <option>Ms</option>
+                      <option>Miss</option>
+                      <option>Dr</option>
+                      <option>Mx</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" id="fullname" name="fullname" required pattern="^[A-Za-z\s\-]{2,}$" />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required
+                    pattern="^((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})$" />
+                </div>
+
+                <!-- Eviction Help Needed -->
+                <div class="select-wrapper">
+                  <select id="evictionType" name="evictionType" required>
+                    <option value="">Eviction Help Needed *</option>
+                    <option>Section 21 (No-Fault)</option>
+                    <option>Section 8 (Rent arrears)</option>
+                    <option>Inherited Tenant Situation</option>
+                    <option>Deposit Protection Issues</option>
+                    <option>Notice Already Served</option>
+                    <option>Rent Arrears Recovery</option>
+                    <option>Trespassers / Squatters</option>
+                    <option>HMO Property Issues</option>
+                    <option>Tenancy Agreement Review</option>
+                    <option>No Tenancy Agreement</option>
+                  </select>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                  <label for="message">Brief Description of Situation</label>
+                  <textarea id="message" name="message" rows="3"
+                    placeholder="Tell us about your situation..."></textarea>
+                </div>
+
+                <!-- Consent -->
+                <div class="form-check">
+                  <input type="checkbox" id="consentCheck" required>
+                  <label for="consentCheck">
+                    I consent to Eviction Help storing and processing my personal data
+                    for the purpose of responding to my enquiry.
+                    I have read and agree to the
+                    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
+                  </label>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center mt-3">
+                  <button type="submit" id="mainSubmitBtn" class="mainSubmitBtn cta-button-orange">
+                    <i class="fas fa-paper-plane"></i> Start My Eviction Now
+                  </button>
+                </div>
+
+                <!-- Success / Error Messages -->
+                <div class="form-success mt-3" id="mainFormSuccess">
+                  <strong>Success!</strong> Your message has been sent successfully.
+                </div>
+
+                <div class="form-error mt-3" id="mainFormError">
+                  <strong>Error!</strong> There was a problem sending your message. Please try again.
+                </div>
+
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+                </div>
+
+                <!-- Office Information -->
+                <div class="col-lg-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-header bg-orange text-white py-3">
+                            <h4 class="card-title mb-0">
+                                <i class="fas fa-building me-2"></i>
+                                Our Offices
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- London Office -->
+                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
+                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
+                                    style="width: 3rem; height: 3rem;">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-orange fw-bold mb-1">London Office</h6>
+                                    <p class="mb-0 small">85 Great Portland Street<br>First Floor, London, W1W 7LT</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
+                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
+                                    style="width: 3rem; height: 3rem;">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <h5 class="card-title text-orange">Call Us Now</h5>
-                                <p class="card-text text-muted">Speak directly with our legal experts for immediate
-                                    assistance</p>
-                                <a href="tel:+443330505381" class="btn btn-outline-orange">
-                                    <i class="fas fa-phone me-2"></i>
-                                    0333 050 5381
-                                </a>
+                                <div>
+                                    <h6 class="text-orange fw-bold mb-1">Phone Support</h6>
+                                    <p class="mb-1">0333 050 5381</p>
+                                    <small class="text-muted">Mon-Fri: 9:00 AM - 6:00 PM</small>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center contact-card border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <div class="icon-circle bg-orange text-white mx-auto mb-3">
+                            <!-- Email -->
+                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
+                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
+                                    style="width: 3rem; height: 3rem;">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <h5 class="card-title text-orange">Email Support</h5>
-                                <p class="card-text text-muted">Send us your case details and we'll respond within 2
-                                    hours
-                                </p>
-                                <a href="mailto:info@evictionlawyers.co.uk" class="btn btn-outline-orange">
-                                    <i class="fas fa-envelope me-2"></i>
-                                    Send Email
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center contact-card border-0 shadow-sm">
-                            <div class="card-body p-4">
-                                <div class="icon-circle bg-orange text-white mx-auto mb-3">
-                                    <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <h6 class="text-orange fw-bold mb-1">Email Support</h6>
+                                    <p class="mb-1">info@evictionlawyers.co.uk</p>
+                                    <small class="text-muted">Response within 2 hours</small>
                                 </div>
-                                <h5 class="card-title text-orange">Book Meeting</h5>
-                                <p class="card-text text-muted">Schedule a free consultation with our legal team</p>
-                                <a href="#contactForm" class="btn btn-outline-orange">
-                                    <i class="fas fa-calendar me-2"></i>
-                                    Book Now
-                                </a>
+                            </div>
+
+                            <!-- Accreditation -->
+                            <div class="d-flex align-items-start">
+                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
+                                    style="width: 3rem; height: 3rem;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-orange fw-bold mb-1">Accreditations</h6>
+                                    <p class="mb-1">SRA Regulated</p>
+                                    <small class="text-muted">Fully authorized legal services</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
     <div class="google-review mt-4" id="google-reviews">
  <div class="container">
     <div class="row gx-4 align-items-start">
@@ -1980,243 +2108,6 @@ textarea {
     </div>
     </div>
     </div>
-         <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-5">
-                <!-- Contact Form -->
-                <div class="col-lg-8">
-                    <div class="card shadow border-0">
-                        <div class="card-header bg-orange text-white py-3">
-                            <h3 class="card-title mb-0">
-                                <i class="fas fa-edit me-2"></i>
-                                Request Your Free Consultation
-                            </h3>
-                        </div>
-                        <div class="card-body p-4">
-                            <p class="text-muted mb-4">Fill out the form below and our legal experts will contact you
-                                within 24 hours to discuss your case and provide initial advice.</p>
-
-                            <form id="contactForm" method="POST">
-                                <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
-                                <input type="hidden" name="from_name" value="Eviction Lawyers Website">
-                                <input type="hidden" name="subject" value="New Contact Form Submission">
-                                <input type="checkbox" name="botcheck" style="display:none">
-
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label fw-semibold">Full Name <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label fw-semibold">Phone Number <span
-                                                class="text-danger">*</span></label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="email" class="form-label fw-semibold">Email Address <span
-                                            class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-
-                                <div class="mb-4">
-                                    <label class="form-label fw-semibold">Type of Legal Assistance Needed</label>
-
-                                    <div class="dropdown w-100">
-                                        <button class="btn btn-light border w-100 d-flex justify-content-between align-items-center"
-                                                type="button"
-                                                id="dropdownAssistance"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                            <span id="dropdownText">Select Assistance Types</span>
-                                            <i class="fas fa-chevron-down"></i>
-                                        </button>
-
-                                        <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownAssistance" style="max-height: 250px; overflow-y: auto;">
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Tenancy agreement in place">
-                                                    Tenancy Agreement Review
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Section 8 fault eviction">
-                                                    Section 8 Fault Eviction
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Section 21 non-fault eviction">
-                                                    Section 21 No-Fault Eviction
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="No tenancy provided">
-                                                    No Tenancy Agreement
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="HMO property">
-                                                    HMO Property Issues
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Trespassers or squatters">
-                                                    Trespassers / Squatters
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Rent arrears">
-                                                    Rent Arrears Recovery
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Notice already served">
-                                                    Notice Already Served
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Deposit protected if taken">
-                                                    Deposit Protection Issues
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-item d-flex align-items-center">
-                                                    <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Bought property with tenant in situ">
-                                                    Inherited Tenant Situation
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="message" class="form-label fw-semibold">Describe Your Situation <span
-                                            class="text-danger">*</span></label>
-                                    <textarea class="form-control" id="message" name="message" rows="5"
-                                        placeholder="Please provide details about your case, timeline, and any specific concerns..."
-                                        required></textarea>
-                                </div>
-
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-orange btn-lg" id="submitBtn">
-                                        <i class="fas fa-paper-plane me-2"></i>
-                                        Send My Request
-                                    </button>
-                                </div>
-
-                                <div class="alert alert-success-custom mt-3" id="formSuccess" style="display: none;">
-                                    <i class="fas fa-check-circle me-2"></i>
-                                    <strong>Success!</strong> Your message has been sent. We'll contact you within 24
-                                    hours.
-                                </div>
-                                <div class="alert alert-danger-custom mt-3" id="formError" style="display: none;">
-                                    <i class="fas fa-exclamation-triangle me-2"></i>
-                                    <strong>Error!</strong> Please try again or call us directly at 0333 050 5381.
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Office Information -->
-                <div class="col-lg-4">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-header bg-orange text-white py-3">
-                            <h4 class="card-title mb-0">
-                                <i class="fas fa-building me-2"></i>
-                                Our Offices
-                            </h4>
-                        </div>
-                        <div class="card-body p-4">
-                            <!-- London Office -->
-                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
-                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
-                                    style="width: 3rem; height: 3rem;">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h6 class="text-orange fw-bold mb-1">London Office</h6>
-                                    <p class="mb-0 small">85 Great Portland Street<br>First Floor, London, W1W 7LT</p>
-                                </div>
-                            </div>
-
-                            <!-- Phone -->
-                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
-                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
-                                    style="width: 3rem; height: 3rem;">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h6 class="text-orange fw-bold mb-1">Phone Support</h6>
-                                    <p class="mb-1">0333 050 5381</p>
-                                    <small class="text-muted">Mon-Fri: 9:00 AM - 6:00 PM</small>
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="d-flex align-items-start mb-4 pb-3 border-bottom">
-                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
-                                    style="width: 3rem; height: 3rem;">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h6 class="text-orange fw-bold mb-1">Email Support</h6>
-                                    <p class="mb-1">info@evictionlawyers.co.uk</p>
-                                    <small class="text-muted">Response within 2 hours</small>
-                                </div>
-                            </div>
-
-                            <!-- Accreditation -->
-                            <div class="d-flex align-items-start">
-                                <div class="icon-circle bg-light text-orange me-3 flex-shrink-0"
-                                    style="width: 3rem; height: 3rem;">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div>
-                                    <h6 class="text-orange fw-bold mb-1">Accreditations</h6>
-                                    <p class="mb-1">SRA Regulated</p>
-                                    <small class="text-muted">Fully authorized legal services</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section class="cta-section">
-        <div class="cta-content">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="cta-title">Ready to Start?</h2>
-                    <p class="cta-text">Contact us today to begin your Section 21 eviction process with confidence.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="cta-buttons">
-                        <a href="tel:+4403330505381" class="cta-section-button-orange">
-                            <i class="fas fa-phone me-2"></i>
-                            Call Us Today
-                        </a>
-                        <a href="#contact" class="cta-section-button-orange">
-                            <i class="fa-solid fa-align-justify me-2"></i>
-                            Contact Form
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
  <section class="popular-services py-5" id="popular-services">
     <div class="container">
       <div class="text-center mb-5">
@@ -2273,7 +2164,7 @@ textarea {
               alt="Service" class="card-image">
             <div class="card-content">
               <h3 class="card-title">Priority Super Package (Contested Case Coverage)</h3>
-              <a href="PriorityEviction.html" class="read-more-btn" role="button" aria-label="Read more about our services">
+              <a href="EvictionProcess.html" class="read-more-btn" role="button" aria-label="Read more about our services">
                 Read more
               </a>
             </div>
@@ -2902,135 +2793,7 @@ textarea {
       }
     });
   </script>
-   <script>
-    // ===== HERO CONTACT FORM =====
-    const heroForm = document.getElementById('contactForm');
 
-    if (heroForm && heroForm.closest('.hero')) {
-      const heroSubmitBtn = document.getElementById('heroSubmitBtn');
-      const heroSuccess = document.getElementById('heroFormSuccess');
-      const heroError = document.getElementById('heroFormError');
-
-      heroForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        heroSuccess.style.display = 'none';
-        heroError.style.display = 'none';
-
-        heroSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-        heroSubmitBtn.disabled = true;
-
-        const formData = new FormData(heroForm);
-
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        })
-          .then(response => {
-            if (response.ok) {
-              heroForm.reset();
-              heroSuccess.style.display = 'block';
-              setTimeout(() => heroSuccess.style.display = 'none', 8000);
-            } else {
-              throw new Error('Submission failed');
-            }
-          })
-          .catch(() => {
-            heroError.style.display = 'block';
-            setTimeout(() => heroError.style.display = 'none', 8000);
-          })
-          .finally(() => {
-            heroSubmitBtn.innerHTML = 'Submit';
-            heroSubmitBtn.disabled = false;
-          });
-      });
-    }
-
-    // ===== MAIN CONTACT FORM =====
-    const mainForm = document.getElementById('mainContactForm');
-
-    if (mainForm) {
-      const mainSubmitBtn = document.getElementById('mainSubmitBtn');
-      const mainSuccess = document.getElementById('mainFormSuccess');
-      const mainError = document.getElementById('mainFormError');
-      const dropdownText = document.getElementById('dropdownText');
-      const checklistInputs = document.querySelectorAll('input[name="checklist[]"]');
-
-      // Assign missing names
-      const nameInput = mainForm.querySelector('input[type="text"]');
-      const emailInput = mainForm.querySelector('input[type="email"]');
-      const phoneInput = mainForm.querySelector('input[type="tel"]');
-      const messageInput = mainForm.querySelector('textarea');
-
-      if (nameInput && !nameInput.name) nameInput.name = 'name';
-      if (emailInput && !emailInput.name) emailInput.name = 'email';
-      if (phoneInput && !phoneInput.name) phoneInput.name = 'phone';
-      if (messageInput && !messageInput.name) messageInput.name = 'message';
-
-      function updateDropdownText() {
-        const selected = Array.from(checklistInputs).filter(cb => cb.checked);
-        const labels = selected.map(cb => cb.parentElement.textContent.trim());
-
-        if (labels.length === 0) dropdownText.textContent = "Select Assistance Types";
-        else if (labels.length <= 2) dropdownText.textContent = labels.join(", ");
-        else dropdownText.textContent = `${labels.length} assistance types selected`;
-      }
-
-      checklistInputs.forEach(cb => cb.addEventListener('change', updateDropdownText));
-
-      document.querySelectorAll('.dropdown-menu label').forEach(label => {
-        label.addEventListener('click', e => e.stopPropagation());
-      });
-
-      mainForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        mainSuccess.style.display = 'none';
-        mainError.style.display = 'none';
-
-        mainSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-        mainSubmitBtn.disabled = true;
-
-        const formData = new FormData(mainForm);
-
-        const selected = Array.from(checklistInputs)
-          .filter(cb => cb.checked)
-          .map(cb => cb.value);
-
-        if (selected.length > 0) {
-          formData.append("Legal Assistance Types", selected.join(", "));
-        }
-
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        })
-          .then(response => {
-            if (response.ok) {
-              mainForm.reset();
-              updateDropdownText();
-
-              mainSuccess.style.display = 'block';
-              mainSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-              setTimeout(() => mainSuccess.style.display = 'none', 8000);
-            } else {
-              throw new Error('Submission failed');
-            }
-          })
-          .catch(() => {
-            mainError.style.display = 'block';
-            mainError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-            setTimeout(() => mainError.style.display = 'none', 8000);
-          })
-          .finally(() => {
-            mainSubmitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-            mainSubmitBtn.disabled = false;
-          });
-      });
-    }
-  </script>
   <script>
     (function () {
       const pcForm = document.getElementById('postcodeForm');
@@ -3160,6 +2923,135 @@ textarea {
         }
       });
     })();
+  </script>
+    <script>
+    // ===== HERO CONTACT FORM =====
+    const heroForm = document.getElementById('contactForm');
+
+    if (heroForm && heroForm.closest('.hero')) {
+      const heroSubmitBtn = document.getElementById('heroSubmitBtn');
+      const heroSuccess = document.getElementById('heroFormSuccess');
+      const heroError = document.getElementById('heroFormError');
+
+      heroForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        heroSuccess.style.display = 'none';
+        heroError.style.display = 'none';
+
+        heroSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        heroSubmitBtn.disabled = true;
+
+        const formData = new FormData(heroForm);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => {
+            if (response.ok) {
+              heroForm.reset();
+              heroSuccess.style.display = 'block';
+              setTimeout(() => heroSuccess.style.display = 'none', 8000);
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(() => {
+            heroError.style.display = 'block';
+            setTimeout(() => heroError.style.display = 'none', 8000);
+          })
+          .finally(() => {
+            heroSubmitBtn.innerHTML = 'Submit';
+            heroSubmitBtn.disabled = false;
+          });
+      });
+    }
+
+    // ===== MAIN CONTACT FORM =====
+    const mainForm = document.getElementById('mainContactForm');
+
+    if (mainForm) {
+      const mainSubmitBtn = document.getElementById('mainSubmitBtn');
+      const mainSuccess = document.getElementById('mainFormSuccess');
+      const mainError = document.getElementById('mainFormError');
+      const dropdownText = document.getElementById('dropdownText');
+      const checklistInputs = document.querySelectorAll('input[name="checklist[]"]');
+
+      // Assign missing names
+      const nameInput = mainForm.querySelector('input[type="text"]');
+      const emailInput = mainForm.querySelector('input[type="email"]');
+      const phoneInput = mainForm.querySelector('input[type="tel"]');
+      const messageInput = mainForm.querySelector('textarea');
+
+      if (nameInput && !nameInput.name) nameInput.name = 'name';
+      if (emailInput && !emailInput.name) emailInput.name = 'email';
+      if (phoneInput && !phoneInput.name) phoneInput.name = 'phone';
+      if (messageInput && !messageInput.name) messageInput.name = 'message';
+
+      function updateDropdownText() {
+        const selected = Array.from(checklistInputs).filter(cb => cb.checked);
+        const labels = selected.map(cb => cb.parentElement.textContent.trim());
+
+        if (labels.length === 0) dropdownText.textContent = "Select Assistance Types";
+        else if (labels.length <= 2) dropdownText.textContent = labels.join(", ");
+        else dropdownText.textContent = `${labels.length} assistance types selected`;
+      }
+
+      checklistInputs.forEach(cb => cb.addEventListener('change', updateDropdownText));
+
+      document.querySelectorAll('.dropdown-menu label').forEach(label => {
+        label.addEventListener('click', e => e.stopPropagation());
+      });
+
+      mainForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        mainSuccess.style.display = 'none';
+        mainError.style.display = 'none';
+
+        mainSubmitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        mainSubmitBtn.disabled = true;
+
+        const formData = new FormData(mainForm);
+
+        const selected = Array.from(checklistInputs)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        if (selected.length > 0) {
+          formData.append("Legal Assistance Types", selected.join(", "));
+        }
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => {
+            if (response.ok) {
+              mainForm.reset();
+              updateDropdownText();
+
+              mainSuccess.style.display = 'block';
+              mainSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+              setTimeout(() => mainSuccess.style.display = 'none', 8000);
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(() => {
+            mainError.style.display = 'block';
+            mainError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            setTimeout(() => mainError.style.display = 'none', 8000);
+          })
+          .finally(() => {
+            mainSubmitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+            mainSubmitBtn.disabled = false;
+          });
+      });
+    }
   </script>
 
 </body>
