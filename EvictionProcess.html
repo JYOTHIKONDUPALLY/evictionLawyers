@@ -92,11 +92,98 @@
       color: #fff;
     }
 
-    .benefit-banner {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
-      color: var(--white);
-    }
+    /* Benefit Banner - Teal Green */
+  .benefit-banner {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+    padding: 1rem 0;
+    color: var(--white);
+  }
+
+  .benefit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefit-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .benefit-check {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .benefit-separator {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Mobile Slider */
+  .benefit-banner-mobile {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
+    padding: 1rem 0;
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .mobile-slider-container {
+    position: relative;
+  }
+
+  .mobile-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+  }
+
+  .mobile-slide {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .indicator.active {
+    background-color: var(--white);
+    width: 24px;
+    border-radius: 4px;
+  }
 
     .hero {
       background: linear-gradient(135deg, rgba(236, 229, 229, .55) 0%, rgba(248, 245, 245, .55) 100%), url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920') center/cover;
