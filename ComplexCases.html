@@ -1473,89 +1473,48 @@
     }
 
     .fixed-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--accent-teal, #009688);
-      color: #fff;
-      z-index: 9999;
-      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent-teal, #009688);
+  color: #fff;
+  z-index: 9999;
+}
 
-    .fixed-cta .cta-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0.5rem;
-    }
+.cta-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+}
 
-    .cta-button-nav {
-      flex: 1;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.85rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
+.cta-item {
+  flex: 1;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .cta-button-nav .cta-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.25rem;
-      transition: all 0.3s ease;
-    }
+.cta-item i {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
 
-    .cta-button-nav i {
-      font-size: 1.2rem;
-    }
+.cta-item span {
+  font-size: 16px;
+  font-weight: 400;
+}
 
-    .cta-button-nav:hover .cta-icon:hover {
-      background: #fff;
-      color: black;
-      transform: scale(1.05);
-    }
-
-    .cta-icon:hover>a {
-      color: black ! important;
-    }
-
-    .cta-button-nav:hover span {
-      opacity: 0.9;
-    }
-
-    /* Pulse effect for call icon */
-    @keyframes phonePulse {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      50% {
-        transform: scale(1.2);
-        opacity: 0.7;
-      }
-
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    .phone-pulse i {
-      animation: phonePulse 1.5s infinite;
-    }
+/* Dividers */
+.cta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 8px 0;
+}
 
     html {
       font-size: 90%;
@@ -1673,10 +1632,8 @@
               <li><a class="dropdown-item" href="wales-guide.html">Wales Notice Guide</a></li>
               <li><a class="dropdown-item" href="arrears.html">Rent Arrears Guide</a></li>
               <li><a class="dropdown-item" href="disrepair.html">Housing Disrepair & Counterclaims</a></li>
-              <li><a class="dropdown-item" href="court.html">Court Procedures & Tenant Defence</a></li>
-              <li><a class="dropdown-item" href="service.html">Complete Service Guide</a></li>
-              <li><a class="dropdown-item" href="contested.html">Contested Cases Info</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              
+              
             </ul>
           </li>
         </ul>
@@ -2737,7 +2694,7 @@
     </div>
   </section>
 
-    <!-- Fixed CTA (Mobile Only) -->
+  <!-- Fixed CTA (Mobile Only) -->
   <div class="fixed-cta d-lg-none" id="fixedCta">
     <div class="cta-nav">
 
@@ -2767,6 +2724,7 @@
 
     </div>
   </div>
+
 
   <!-- footer -->
     <footer class="mt-5">
@@ -3311,6 +3269,28 @@
         }
       });
     })();
+  </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctaMenuBtn = document.getElementById("ctaMenuBtn");
+      const navbarCollapse = document.getElementById("navbarNavDropdown");
+
+      // Bootstrap collapse instance
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+
+      // Toggle on CTA Menu click
+      ctaMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (navbarCollapse.classList.contains("show")) {
+          bsCollapse.hide();
+        } else {
+          bsCollapse.show();
+        }
+      });
+    });
   </script>
 
 </body>

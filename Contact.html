@@ -1422,10 +1422,20 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .input-row-full-name {
-    /* flex-direction: column; */
+    .input-row-full-name {
+      /* flex-direction: column; */
+    }
+
+    .card-image{
+      height:100%;
+    }
+    .service-card-new {
+      height:250px;
+    }
+    .card-title {
+      max-width:50%;
+    }
   }
-}
 
 .section-alt{
   background-color:#1a5370;
@@ -1525,6 +1535,49 @@ html {
       /* ↓ global reduction */
     }
   }
+  .fixed-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--accent-teal, #009688);
+  color: #fff;
+  z-index: 9999;
+}
+
+.cta-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+}
+
+.cta-item {
+  flex: 1;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-item i {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.cta-item span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Dividers */
+.cta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 8px 0;
+}
   </style>
 </head>
 
@@ -1580,10 +1633,8 @@ html {
               <li><a class="dropdown-item" href="wales-guide.html">Wales Notice Guide</a></li>
               <li><a class="dropdown-item" href="arrears.html">Rent Arrears Guide</a></li>
               <li><a class="dropdown-item" href="disrepair.html">Housing Disrepair & Counterclaims</a></li>
-              <li><a class="dropdown-item" href="court.html">Court Procedures & Tenant Defence</a></li>
-              <li><a class="dropdown-item" href="service.html">Complete Service Guide</a></li>
-              <li><a class="dropdown-item" href="contested.html">Contested Cases Info</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              
+              
             </ul>
           </li>
         </ul>
@@ -2502,35 +2553,38 @@ html {
     </div>
   </div>
 </section>
-<!-- Fixed CTA (Mobile Only) -->
-<div class="fixed-cta d-lg-none" id="fixedCta">
-  <div class="container-fluid px-0">
-    <div class="cta-nav d-flex justify-content-around align-items-center">
-      
-      <a href="tel:+4403333050381" class="cta-button-nav">
-        <div class="cta-icon">
-          <i class="fas fa-phone"></i>
-        </div>
-        <span>Call</span>
+
+  <!-- Fixed CTA (Mobile Only) -->
+  <div class="fixed-cta d-lg-none" id="fixedCta">
+    <div class="cta-nav">
+
+      <!-- Phone -->
+      <a href="tel:+4403333050381" class="cta-item">
+        <i class="fas fa-phone"></i>
+        <span>Phone</span>
       </a>
 
-      <a href="mailto:info@evictionhelp.co.uk" class="cta-button-nav">
-        <div class="cta-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <span>Email</span>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
+
+      <!-- Enquiry -->
+      <a href="mailto:info@evictionhelp.co.uk" class="cta-item">
+        <i class="fas fa-envelope"></i>
+        <span>Enquiry</span>
       </a>
 
-      <a href="#contact" class="cta-button-nav">
-        <div class="cta-icon">
-          <i class="fas fa-comment-dots"></i>
-        </div>
-        <span>Enquire</span>
+      <!-- Divider -->
+      <div class="cta-divider"></div>
+
+      <!-- Menu -->
+      <a href="#" class="cta-item" id="ctaMenuBtn">
+        <i class="fas fa-bars"></i>
+        <span>Menu</span>
       </a>
 
     </div>
   </div>
-</div>
+
   <footer class="mt-5">
     <div class="container">
       <div class="row">
@@ -3052,6 +3106,28 @@ html {
           });
       });
     }
+  </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctaMenuBtn = document.getElementById("ctaMenuBtn");
+      const navbarCollapse = document.getElementById("navbarNavDropdown");
+
+      // Bootstrap collapse instance
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+
+      // Toggle on CTA Menu click
+      ctaMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (navbarCollapse.classList.contains("show")) {
+          bsCollapse.hide();
+        } else {
+          bsCollapse.show();
+        }
+      });
+    });
   </script>
 
 </body>

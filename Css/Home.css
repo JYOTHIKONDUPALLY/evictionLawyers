@@ -902,10 +902,20 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .input-row-full-name {
-    /* flex-direction: column; */
+    .input-row-full-name {
+      /* flex-direction: column; */
+    }
+
+    .card-image{
+      height:100%;
+    }
+    .service-card-new {
+      height:250px;
+    }
+    .card-title {
+      max-width:50%;
+    }
   }
-}
 
 .section-alt{
   background-color:#1a5370;
