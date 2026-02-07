@@ -1,0 +1,20 @@
+.icon-circle {
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+         .bg-orange {
+            background-color: var(--primary-orange) !important;
+        }
+
+        .bg-light-orange {
+            background-color: var(--light-orange) !important;
+        }
+
+        .text-orange {
+            color: var(--primary-orange) !important;
+        }

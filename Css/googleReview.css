@@ -1,0 +1,152 @@
+.google-reviews-carousel {
+  background-color: #fff;
+  padding: 4rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.google-logo {
+  width: 100px;
+}
+
+.review-summary h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #111;
+}
+
+.review-summary .stars {
+  color: #fbbc04;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.review-summary p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.review-summary a {
+  color: #f37810;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.review-summary a:hover {
+  text-decoration: underline;
+}
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1a73e8;        /* blue circle */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* --- Carousel Styles --- */
+.carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  scroll-snap-align: start;
+  padding: 0 1rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 320px;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap:20px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+}
+
+.verified {
+  color: #1a73e8;
+  font-size: 14px;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #777;
+}
+
+.review-stars i {
+  color: #fbbc04;
+  margin-right: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.review-readmore {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+  .review-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 100%;
+  }
+}
