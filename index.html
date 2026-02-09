@@ -191,29 +191,96 @@
     color:var(--text-dark)
  }
  /* Hero Section */
-    .hero {
-      background: linear-gradient(
-                135deg, 
-                rgba(236, 229, 229, 0.55) 0%, 
-                rgba(248, 245, 245, 0.55) 100%
-              ),
-              url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920') center/cover;
-  padding: 2rem 0;
-  position: relative;
-    }
+.hero {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(20, 20, 20, 0.75) 0%,
+      rgba(20, 20, 20, 0.65) 100%
+    ),
+    url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920')
+    center center / cover no-repeat;
+
+  padding: 3rem 0;
+  min-height: 600px;
+}
+@media (max-width: 991px) {
+  .hero {
+    background: none; /* remove bg from full section */
+    padding: 0 !important;
+  }
+
+  .hero-content {
+    background:
+      linear-gradient(
+        120deg,
+        rgba(20, 20, 20, 0.75) 0%,
+        rgba(20, 20, 20, 0.65) 100%
+      ),
+      url('https://images.unsplash.com/photo-1758598305499-bdbaa6c7854e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920')
+      center 30% / cover no-repeat;
+
+    padding: 2rem 1.5rem;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
     .hero h1 {
       font-size: 3.2rem;
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--white);
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
 
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .rating-stars {
+        font-size: 1rem !important;
+      }
+      .hero-btn{
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .rating-stars {
+        font-size: 0.9rem !important;
+      }
+      .hero-btn{
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+      }
+    }
+
     .hero p {
       font-size: 1.1rem;
-      color: var(--text-dark);
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
     }
 
     .hero-btn {
@@ -247,6 +314,27 @@
       font-size: 2.3rem;
       font-weight: 700;
       color: var(--text-dark);
+    }
+
+    @media (max-width: 768px) {
+      .contact-card {
+        padding: 1.5rem;
+      }
+
+      .contact-card h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact-card {
+        padding: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .contact-card h3 {
+        font-size: 1.3rem;
+      }
     }
 
     .form-control {
@@ -289,6 +377,24 @@
       font-weight: 800;
       color: var(--text-dark);
       margin-bottom: 1rem;
+    }
+
+    @media (max-width: 992px) {
+      .contact-section h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact-section h2 {
+        font-size: 1.4rem;
+      }
     }
 
     .contact-section .subtitle {
@@ -382,7 +488,7 @@
  .rating-number {
      font-size: 40px;
      font-weight: 800;
-     color: var(--text-dark);
+     color: var(--white);
  }
 
  .stars {
@@ -447,6 +553,14 @@ text-align: center;
   max-width: 50%;
 }
 
+@media (max-width: 991px) {
+  .eviction-left,
+  .eviction-right {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
 /* --- Left Content --- */
 .eviction-left h2 {
   font-weight: 700;
@@ -459,6 +573,13 @@ text-align: center;
   color: #333;
   line-height: 1.7;
   margin-bottom: 1rem;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .eviction-left p {
+    text-align: left;
+  }
 }
 
 /* --- Right Card --- */
@@ -473,6 +594,7 @@ text-align: center;
   font-weight: 700;
   color: #000;
   margin-bottom: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
 }
 
 .content-nav-card ul {
@@ -494,6 +616,19 @@ text-align: center;
   gap: 8px;
   transition: color 0.2s ease;
   line-height: 1.4;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .content-nav-card ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-nav-card ul li a {
+    font-size: 0.85rem;
+  }
 }
 
 .content-nav-card ul li a:hover {
@@ -502,7 +637,7 @@ text-align: center;
 
 .content-nav-card i {
   font-size: 0.5rem;
-  color:var(--primary-teal);
+  color: #10b981;
   margin-top: 6px;
 }
 
@@ -525,19 +660,77 @@ text-align: center;
 /* --- Process Section --- */
 .eviction-process {
   background: #fff;
+  margin-right: 20px;
 }
 
 .process-card {
   /* background: #e5e7eb; */
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
+  background-color: #e5e7eb;
+  color: var(--text-dark);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
+  max-width:400px;
+  
 }
 
 .process-card:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transform: translateY(-3px);
+}
+
+.process-card h5 {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.process-card p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .process-card {
+    padding: 15px;
+  }
+
+  .process-card h5 {
+    font-size: 1rem;
+  }
+
+  .process-card p {
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-card {
+    padding: 12px;
+  }
+
+  .process-card h5 {
+    font-size: 0.9rem;
+  }
+
+  /* .process-card p {
+    display: none;
+  } */
+
+  .expand-btn {
+    display: inline-block;
+    color: #0066ff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .process-step .step-number {
@@ -694,6 +887,18 @@ text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    @media (max-width: 768px) {
+      .service-card-new {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .service-card-new {
+        height: 220px;
+      }
+    }
+
     .service-card-new:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(0,0,0,0.2);
@@ -723,6 +928,18 @@ text-align: center;
       justify-content: space-between;
     }
 
+    @media (max-width: 768px) {
+      .card-content {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-content {
+        padding: 15px;
+      }
+    }
+
     .card-title {
       color: white;
       font-size: 1.5rem;
@@ -730,6 +947,20 @@ text-align: center;
       line-height: 1.2;
       max-width: 70%;
       margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .card-title {
+        font-size: 1.2rem;
+        max-width: 65%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-title {
+        font-size: 1rem;
+        max-width: 70%;
+      }
     }
 
     .read-more-btn {
@@ -744,6 +975,20 @@ text-align: center;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
       text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .read-more-btn {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .read-more-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
     }
 
     .read-more-btn:hover {
@@ -818,16 +1063,35 @@ text-align: center;
 
 /* Right Side Court Lookup */
 .lookup-block {
-  background: #fff;
+  background: #242f49;
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #3a4a5f;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  color: white;
 }
 
 .lookup-block h3 {
-  color: #0b0c10;
+  color: white;
   font-weight: 700;
+}
+
+.lookup-block p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lookup-block .help-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .lookup-block {
+    padding: 1.5rem;
+  }
+
+  .lookup-block h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .postcode-input {
@@ -922,6 +1186,20 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
+}
+
+.form-check label {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .form-check {
+    font-size: 9px;
+  }
+
+  .form-check label {
+    font-size: 0.85rem;
+  }
 }
 
 .form-check input {
@@ -1345,8 +1623,14 @@ footer a:hover {
     /* Benefit Banner - Teal Green */
     .benefit-banner {
       background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .benefit-banner {
+        padding: 0.3rem 0;
+      }
     }
 
     .benefit-container {
@@ -1368,7 +1652,13 @@ footer a:hover {
       align-items: center;
       gap: 0.5rem;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefit-item {
+        font-size: 0.75rem;
+      }
     }
 
     .benefit-check {
@@ -1391,7 +1681,7 @@ footer a:hover {
     /* Mobile Slider */
     .benefit-banner-mobile {
       background: linear-gradient(135deg, var(--primary-teal) 0%, #0d9488 100%);
-      padding: 1rem 0;
+      padding: 0.1rem 0;
       color: var(--white);
       overflow: hidden;
     }
@@ -1723,8 +2013,8 @@ footer a:hover {
   <section class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1>England & Wales Eviction Specialist</h1>
+        <div class="col-lg-6 hero-content">
+          <h1 class="hero-title">England & Wales Eviction Specialist</h1>
           <p>
             Facing issues with tenants or unpaid rent? Our experienced lawyers help landlords, housing
             associations & estate agents reclaim property with expert eviction support, legal compliance,
@@ -1732,11 +2022,11 @@ footer a:hover {
           </p>
 
           <div>
-            <p class="small mb-0 text-dark mb-2">
+            <p class="small mb-0 text-white mb-2">
               <i class="fas fa-check-circle text-success me-2"></i>
               Helping landlords and agents legally reclaim properties.
             </p>
-            <p class="small mb-0 text-dark mb-2">
+            <p class="small mb-0 text-white mb-2">
               <i class="fas fa-check-circle text-success me-2"></i>
               Fast, compliant eviction support nationwide.
             </p>
@@ -1748,13 +2038,13 @@ footer a:hover {
             <div class="google-review-box d-inline-flex align-items-center mt-3 p-2 px-3">
               <img src="../assets/google.png" alt="Google Logo" class="me-2" width="40" height="40">
               <span class="rating-number">4.8</span>
-              <div class="me-2" style="font-size:1.2rem; color:#f7c948;">
+              <div class="me-2 rating-stars" style="font-size:1.2rem; color:#f7c948;">
                 <!-- 4.8 stars (visual) -->
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                   class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
               </div>
-              <span class="ms-2 text-muted fw-semibold">Google Reviews</span>
+              <span class="ms-2 text-white fw-semibold">Google Reviews</span>
             </div>
           </a>
 
@@ -1808,7 +2098,8 @@ footer a:hover {
 
         <!-- Left Column -->
         <div class="eviction-left">
-          <h3 class="text-center mb-4">What Is Eviction in England & Wales?</h3>
+          <h3 class="text-center mb-4" style="font-size: clamp(1.2rem, 4vw, 1.8rem);">What Is Eviction in England & Wales?</h3>
+          <div class="py-2">
           <p>
             Eviction is the formal legal process for regaining possession of a property when a tenancy ends or
             obligations are not met. Landlords must comply with the Housing Act 1988, Housing Act 1996, and the Renters
@@ -1822,6 +2113,7 @@ footer a:hover {
             advice or assistance from a qualified letting agent or solicitor can help ensure the eviction process is
             handled lawfully, fairly, and efficiently, minimizing potential disputes or delays.</p>
         </div>
+          </div>
 
         <!-- Right Column -->
         <div class="eviction-right">
@@ -2100,16 +2392,16 @@ footer a:hover {
   <section class="eviction-process py-5" id="our-process">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Step-by-Step Eviction Process</h2>
+        <h2 class="fw-bold" style="font-size: clamp(1.4rem, 5vw, 2.2rem);">Step-by-Step Eviction Process</h2>
         <p class="text-muted">
-          When a tenant fails to vacate the property after being served with a valid notice, the landlord must take the
+          When a tenant fails to vzzacate the property after being served with a valid notice, the landlord must take the
           next step by applying to the court for possession. This formal process ensures you recover your property
           lawfully and in line with the Housing Act. The court will guide the matter through a series of stages,
           typically taking 6–12 weeks.
         </p>
       </div>
 
-      <div class="row g-4 align-items-center justify-content-center">
+      <div class="row g-4 align-items-center justify-content-around mb-5">
         <!-- Step 1 -->
         <div class="col-md-5 process-card">
           <div class="process-step d-flex align-items-start">
@@ -2207,7 +2499,7 @@ footer a:hover {
         <!-- Right: Content -->
         <div class="col-lg-6">
           <div class="content">
-            <h2 class="fw-bold mb-3">Why Choose Us</h2>
+            <h2 class="fw-bold mb-3" style="font-size: clamp(1.4rem, 5vw, 2rem);">Why Choose Us</h2>
             <p class="text-muted mb-4">
               With several years of experience, we have helped countless landlords across the UK successfully resolve
               their tenancy disputes. Our expertise, efficiency, and client-focused approach ensure you're always in
@@ -2250,7 +2542,7 @@ footer a:hover {
   <section class="popular-services py-5" id="popular-services">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold">
+        <h2 class="fw-bold" style="font-size: clamp(1.4rem, 5vw, 2.2rem);">
           <span class="highlight">Popular</span> Services
         </h2>
         <p class="text-muted">
@@ -2340,7 +2632,7 @@ footer a:hover {
   <section class="our-location py-5" id="Locations-We-Serve">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="fw-bold">Some Areas We Cover</h1>
+        <h1 class="fw-bold" style="font-size: clamp(1.4rem, 5vw, 2.2rem);">Some Areas We Cover</h1>
         <p class="text-muted w-75 mx-auto">
           We provide eviction and housing legal services for landlords, tenants, and agents across England and Wales.
           Whether you're based in a major city or surrounding area, we can help.
@@ -2364,9 +2656,6 @@ footer a:hover {
             <div class="location-item">Sheffield</div>
             <div class="location-item">Brighton</div>
             <div class="location-item">Cambridge</div>
-            <div class="location-item">Oxford</div>
-            <div class="location-item">Liverpool</div>
-            <div class="location-item">Leeds</div>
           </div>
         </div>
 
@@ -2415,7 +2704,7 @@ footer a:hover {
 
               <div id="loader" class="loader mt-3" hidden>Finding your local court…</div>
 
-              <div class="compliance-note mt-3 small text-muted">
+              <div class="compliance-note mt-3 small text-white">
                 Court information sourced from
                 <a href="https://www.find-court-tribunal.service.gov.uk/services/money/housing/nearest/search-by-postcode"
                   target="_blank">HMCTS/GOV.UK</a> (Open Government Licence).
@@ -2429,7 +2718,7 @@ footer a:hover {
   </section>
   <section class="section section-alt mt-4 mb-md-2 py-md-4">
     <div class="container">
-      <h2 class="text-center">Start Your Eviction Today</h2>
+      <h2 class="text-center" style="font-size: clamp(1.4rem, 5vw, 2rem);">Start Your Eviction Today</h2>
       <p class="text-center" style="font-size: 14px; margin-bottom: 1rem;">
         Complete our 30-second form and we'll call you back within 24 hours
       </p>
@@ -2510,8 +2799,7 @@ footer a:hover {
                 <div class="form-check">
                   <input type="checkbox" id="consentCheck" required>
                   <label for="consentCheck">
-                    I consent to Eviction Help storing and processing my personal data
-                    for the purpose of responding to my enquiry.
+                    I consent to my details being shared with a specialist, who may contact me directly regarding my eviction enquiry.
                     I have read and agree to the
                     <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
                   </label>
@@ -2547,7 +2835,7 @@ footer a:hover {
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h2 class="fw-bold mb-2">Frequently Asked Questions</h2>
+            <h2 class="fw-bold mb-2" style="font-size: clamp(1.4rem, 5vw, 2rem);">Frequently Asked Questions</h2>
             <p class="text-muted">Clear answers to the most common landlord and tenant queries.</p>
           </div>
 
@@ -2774,8 +3062,7 @@ footer a:hover {
                   <div>
                     <i class="fas fa-map-marker-alt text-white me-2 mt-1 d-inline-block d-md-none"></i>
                     85 Great Portland Street,<br>
-                    First Floor, London, W1W 7LT<br>
-                    12 Chapel Street, Cheshire SK14 1LF
+                    First Floor, London, W1W 7LT
                   </div>
                 </div>
               </div>
@@ -2807,49 +3094,6 @@ footer a:hover {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Coverage Section -->
-      <div class="coverage-section">
-        <div class="text-center mb-4">
-          <h3 class="coverage-title">Some Areas We Cover</h3>
-                  </div>
-        <div class="coverage-grid">
-          <div class="coverage-column">
-            <ul class="list-unstyled">
-
-              <li><a href="Birmingham.html" class="coverage-link">Eviction Lawyers in Birmingham</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in London</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Leeds</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Liverpool</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Manchester</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Bristol</a></li>
-            </ul>
-          </div>
-          <div class="coverage-column">
-            <ul class="list-unstyled">
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Sheffield</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Nottingham</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Coventry</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Brighton & Hove</a>
-              </li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Derby</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Newcastle upon
-                  Tyne</a></li>
-            </ul>
-          </div>
-          <div class="coverage-column">
-            <ul class="list-unstyled">
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Southampton</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Norwich</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Reading</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Cardiff</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Swansea</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Wrexham</a></li>
-              <li><a href="Contact.html" class="coverage-link">Eviction Lawyers in Newport</a></li>
-            </ul>
           </div>
         </div>
       </div>
