@@ -1816,6 +1816,11 @@ text-align: center;
         width: 100%;
         max-width: 300px;
       }
+      
+      /* Style consent checkbox on mobile */
+      .form-check-label {
+        font-size: 0.8rem !important;
+      }
     }
 
 
@@ -2008,8 +2013,14 @@ text-align: center;
                 <textarea class="form-control" rows="3" placeholder="Reason for eviction" required id="reason"
                   name="reason"></textarea>
               </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="consentCheckbox" required>
+                <label class="form-check-label" for="consentCheckbox" style="font-size: 0.85rem; line-height: 1.4;">
+                  I consent to eviction help storing and processing my personal data for a specialist, to respond to my enquiry.
+                </label>
+              </div>
               <button type="submit" class="btn w-100" id="heroSubmitBtn"
-                style="background-color:#f37810;color:white;">Submit</button>
+                style="background-color:#f37810;color:white;" disabled>Submit</button>
             </form>
             <div class="form-success" id="heroFormSuccess">
               <strong>Success!</strong> Your message has been sent successfully.
@@ -3099,6 +3110,15 @@ text-align: center;
       const heroSubmitBtn = document.getElementById('heroSubmitBtn');
       const heroSuccess = document.getElementById('heroFormSuccess');
       const heroError = document.getElementById('heroFormError');
+      const consentCheckbox = document.getElementById('consentCheckbox');
+
+      // Initially disable submit button
+      heroSubmitBtn.disabled = true;
+
+      // Handle checkbox change
+      consentCheckbox.addEventListener('change', function() {
+        heroSubmitBtn.disabled = !this.checked;
+      });
 
       heroForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -3118,6 +3138,8 @@ text-align: center;
           .then(response => {
             if (response.ok) {
               heroForm.reset();
+              consentCheckbox.checked = false; // Reset checkbox
+              heroSubmitBtn.disabled = true; // Re-disable submit button
               heroSuccess.style.display = 'block';
               setTimeout(() => heroSuccess.style.display = 'none', 8000);
             } else {
